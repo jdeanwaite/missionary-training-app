@@ -6,16 +6,14 @@ import { Container, Content } from 'native-base';
 import LessonNavigationGroup from './LessonList';
 import type { Lesson } from '../../types/Lesson';
 
+const principle1 = require('../../../scratches/principle.json');
+
 export default class HomePage extends Component<{}> {
   render() {
     const lessons: Lesson[] = [
       {
         name: 'The Restoration',
-        principles: [
-          {
-            name: 'God Is Our Loving Heavenly Father',
-          },
-        ],
+        principles: [principle1],
       },
     ];
     return (

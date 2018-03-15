@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import React from 'react';
+import { Content } from 'native-base';
+import { ScriptureGroup } from '../../types/Lesson';
+import ScriptureGroupComponent from './ScriptureGroupComponent';
 
-export default class ScripturesPage extends Component<{}> {
-  render() {
-    return (
-      <View>
-        <Text>Scriptures</Text>
-      </View>
-    );
-  }
+type Props = {
+  screenProps: {
+    scriptureGroups: ScriptureGroup[],
+  },
+};
+
+export default function ScripturesPage(props: Props) {
+  const { scriptureGroups } = props.screenProps;
+  return (
+    <Content padder>
+      {scriptureGroups.map(scriptureGroup => (
+        <ScriptureGroupComponent key={scriptureGroup.id} scriptureGroup={scriptureGroup} />
+      ))}
+    </Content>
+  );
 }

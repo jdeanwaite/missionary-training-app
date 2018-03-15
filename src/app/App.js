@@ -4,12 +4,12 @@
  * @flow
  */
 
-import React, { Component } from "react";
-import { Platform, StyleSheet, Text, View, StatusBar } from "react-native";
-import MainStack from "../navigation/MainStack";
-import getTheme from "../theme/native-base-theme/components";
-import platform from "../theme/native-base-theme/variables/platform";
-import { StyleProvider } from "native-base";
+import React, { Component } from 'react';
+import { View, StatusBar } from 'react-native';
+import { StyleProvider } from 'native-base';
+import MainStack from '../navigation/MainStack';
+import getTheme from '../theme/native-base-theme/components';
+import platform from '../theme/native-base-theme/variables/platform';
 
 type Props = {};
 

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Body, Button, Container, Header, Icon, Left, Right, Tab, Tabs, Text, Title,
-  View,
-} from 'native-base';
+import { Body, Button, Container, Header, Icon, Left, Tab, Tabs, Title } from 'native-base';
 import { Platform } from 'react-native';
 import type { NavigationScreenProp } from 'react-navigation/lib/TypeDefinition';
 import LearnPage from '../learn/LearnPage';
@@ -14,13 +11,13 @@ const platform = Platform.OS;
 
 type NavigationState = {
   params: {
-    principle: Principle
-  }
-}
+    principle: Principle,
+  },
+};
 
 type Props = {
-  navigation: NavigationScreenProp<NavigationState, *>
-}
+  navigation: NavigationScreenProp<NavigationState, *>,
+};
 
 export default class PrinciplePage extends Component<Props> {
   static navigationOptions = ({ navigation }) => {
@@ -43,16 +40,31 @@ export default class PrinciplePage extends Component<Props> {
   };
 
   render() {
-    const principle = this.props.navigation.state.params.principle;
-    console.log('principle', principle);
+    const {
+      doctrine,
+      teach,
+      videos,
+      scriptureGroups,
+    } = this.props.navigation.state.params.principle;
+
+    const learnPageProps = {
+      doctrine,
+      videos,
+      scriptureGroups,
+    };
+
+    const teachPageProps = {
+      teach,
+    };
+
     return (
       <Container>
-        <Tabs initialPage={0}>
+        <Tabs initialPage={0} locked>
           <Tab heading="Learn">
-            <LearnPage />
+            <LearnPage screenProps={learnPageProps} />
           </Tab>
           <Tab heading="Teach">
-            <TeachPage />
+            <TeachPage screenProps={teachPageProps} />
           </Tab>
           <Tab heading="Notes">
             <NotesPage />

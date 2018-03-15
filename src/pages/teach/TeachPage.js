@@ -2,9 +2,8 @@ import React from 'react';
 import { TabBarBottom, TabNavigator } from 'react-navigation';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import variables from '../../theme/native-base-theme/variables/platform';
-import MyRecordingsPage from '../my-recordings/MyRecordingsPage';
 import TeachInstructionPage from '../teach-instruction/TeachInstructionPage';
-
+import MyRecordingsPage from '../my-recordings/MyRecordingsPage';
 
 // class LearnPage extends Component<{ principle: Principle }> {
 //   render() {
@@ -17,10 +16,10 @@ import TeachInstructionPage from '../teach-instruction/TeachInstructionPage';
 export default TabNavigator(
   {
     Instruction: {
-      screen: MyRecordingsPage,
+      screen: TeachInstructionPage,
     },
     MyRecordings: {
-      screen: TeachInstructionPage,
+      screen: MyRecordingsPage,
     },
   },
   {

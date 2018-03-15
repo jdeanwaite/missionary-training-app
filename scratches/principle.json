@@ -1,10 +1,79 @@
 {
-  "doctrine": [
+  "name": "God Is Our Loving Heavenly Father",
+  "doctrine": {
+    "markdown":
+      "# God Is Our Loving Heavenly Father\r\nGod is our Heavenly Father. We are His children. He has a body of flesh and bone that is glorified and perfected. He loves us. He weeps with us when we suffer and rejoices when we do what is right. He wants to communicate with us, and we can communicate with Him through sincere prayer.\r\n\r\nHe has given us this experience on the earth so we can learn and grow. We can show our love for Him through our choices and our obedience to His commandments.\r\n\r\nHeavenly Father has provided us, His children, with a way to be successful in this life and to return to live in His presence. However, we must be pure and clean through obedience in order to do so. Disobedience moves us away from Him. Central to our Father\u2019s plan is Jesus Christ\u2019s Atonement. The Atonement included His suffering in the Garden of Gethsemane as well as His suffering and death on the cross. Through the Atonement we can be freed from the burden of our sins and develop faith and strength to face our trials.\r\n\r\n# Belief about God\r\nDetermine what each person you are teaching understands regarding Christian beliefs about God. Many people in today\u2019s world either have no concept of God or a very different perception of Deity.\r\nTwo Book of Mormon missionaries, Ammon and Aaron, taught people who did not have a Christian background. They taught simple truths and invited their investigators to pray. Lamoni and his father were converted. Read Alma 18:24\u201340 and 22:4\u201323, and answer the questions below:\r\n \r\n* What did these missionaries teach about the nature of God?\r\n* How can you follow their examples?"
+  },
+  "teach": {
+    "instruction": {
+      "markdown":
+        "# What we teach\u2026\r\nGod is your Father in Heaven. He knows you personally and loves you more than you can comprehend. He wants you to be happy in this life and in eternity.\r\n\r\nTo accomplish this purpose, Heavenly Father provided a plan called the gospel of Jesus Christ. Jesus Christ is the Son of God; His life and teachings are the guide to peace in this life and joy in eternity."
+    }
+  },
+  "videos": [
     {
-      "id": 1,
-      "title": "God Is Our Loving Heavenly Father",
-      "content":
-        "God is our Heavenly Father. We are His children. He has a body of flesh and bone that is glorified and perfected. He loves us. He weeps with us when we suffer and rejoices when we do what is right. He wants to communicate with us, and we can communicate with Him through sincere prayer.\n\nHe has given us this experience on the earth so we can learn and grow. We can show our love for Him through our choices and our obedience to His commandments.\n\nHeavenly Father has provided us, His children, with a way to be successful in this life and to return to live in His presence. However, we must be pure and clean through obedience in order to do so. Disobedience moves us away from Him. Central to our Father’s plan is Jesus Christ’s Atonement. The Atonement included His suffering in the Garden of Gethsemane as well as His suffering and death on the cross. Through the Atonement we can be freed from the burden of our sins and develop faith and strength to face our trials."
+      "id": "1",
+      "title": "God Is Our Father",
+      "embedHtml":
+        "<iframe src='https://players.brightcove.net/710874264001/default_default/index.html?videoId=1337818779001' allowfullscreen frameborder=0></iframe>",
+      "poster":
+        "https://ldspdo-a.akamaihd.net/66852713001/66852713001_2196000001001_2011-06-02-god-is-our-father-768x432-still.jpg?pubId=710874264001&videoId=1337818779001"
+    },
+    {
+      "id": "2",
+      "title": "You Matter to Him",
+      "embedHtml":
+        "<iframe src='https://players.brightcove.net/710874264001/default_default/index.html?videoId=3730868396001' allowfullscreen frameborder=0></iframe>",
+      "poster":
+        "https://ldspdo-a.akamaihd.net/66852713001/66852713001_3580607470001_vs-537d04ace4b0fa3334e4bca0-782203297001.jpg?pubId=710874264001&videoId=3730868396001"
+    },
+    {
+      "id": "3",
+      "title": "God Is the Father of Our Spirits",
+      "embedHtml":
+        "<iframe src='https://players.brightcove.net/710874264001/default_default/index.html?videoId=5042079308001' allowfullscreen frameborder=0></iframe>",
+      "poster":
+        "https://httpslds-a.akamaihd.net/710874264001/710874264001_5705235145001_5042079308001-vs.jpg?pubId=710874264001&videoId=5042079308001"
+    }
+  ],
+  "scriptureGroups": [
+    {
+      "id": "1",
+      "title": "What is the nature of God the Father and Jesus Christ?",
+      "scriptures": [
+        {
+          "id": "1",
+          "displayText": "1 Nephi 17:36",
+          "book": "bofm",
+          "subBook": "1-ne",
+          "chapter": "17",
+          "verse": "36"
+        },
+        {
+          "id": "2",
+          "displayText": "2 Nephi 9:6",
+          "book": "bofm",
+          "subBook": "2-ne",
+          "chapter": "9",
+          "verse": "6"
+        },
+        {
+          "id": "3",
+          "displayText": "Mosiah 4:9",
+          "book": "bofm",
+          "subBook": "mosiah",
+          "chapter": "4",
+          "verse": "9"
+        },
+        {
+          "id": "4",
+          "displayText": "3 Nephi 12:48",
+          "book": "bofm",
+          "subBook": "3-ne",
+          "chapter": "12",
+          "verse": "48"
+        }
+      ]
     }
   ]
 }

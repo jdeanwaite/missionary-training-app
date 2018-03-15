@@ -7,7 +7,6 @@ import ScripturesPage from '../scriptures/ScripturesPage';
 import QuizPage from '../quiz/QuizPage';
 import variables from '../../theme/native-base-theme/variables/platform';
 
-
 // class LearnPage extends Component<{ principle: Principle }> {
 //   render() {
 //     return (
@@ -58,6 +57,6 @@ export default TabNavigator(
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
     animationEnabled: false,
-    swipeEnabled: true,
+    swipeEnabled: false,
   },
 );
