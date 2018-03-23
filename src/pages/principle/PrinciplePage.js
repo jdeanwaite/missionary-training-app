@@ -57,17 +57,21 @@ export default class PrinciplePage extends Component<Props> {
       teach,
     };
 
+    const { navigation } = this.props;
+
+    console.log('navigation', navigation);
+
     return (
       <Container>
         <Tabs initialPage={0} locked>
           <Tab heading="Learn">
-            <LearnPage screenProps={learnPageProps} />
+            <LearnPage navigation={navigation} screenProps={learnPageProps} />
           </Tab>
           <Tab heading="Teach">
-            <TeachPage screenProps={teachPageProps} />
+            <TeachPage navigation={navigation} screenProps={teachPageProps} />
           </Tab>
           <Tab heading="Notes">
-            <NotesPage />
+            <NotesPage navigation={navigation} />
           </Tab>
         </Tabs>
       </Container>

@@ -12,6 +12,9 @@ export type Principle = {
     instruction: {
       markdown: string,
     },
+    pointsToTeach: {
+      markdown: string,
+    },
   },
   videos: EmbeddableVideo[],
   scriptureGroups: ScriptureGroup[],
@@ -37,4 +40,28 @@ export type ScriptureGroup = {
   id: string,
   title: string,
   scriptures: Scripture[],
+};
+
+export type Quiz = {
+  questions: QuizQuestion[],
+};
+
+export type QuizQuestion = {
+  type: 'multiple_choice' | 'free_response',
+  question: string,
+};
+
+export type MultipleChoiceQuestion = QuizQuestion & {
+  type: 'multiple_choice',
+  options: MultipleChoiceOption[],
+  correctAnswerId: string,
+};
+
+export type MultipleChoiceOption = {
+  id: string,
+  text: string,
+};
+
+export type FreeResponseQuestion = {
+  type: 'free_response',
 };

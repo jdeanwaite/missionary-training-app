@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
 import { Content } from 'native-base';
 import { MarkdownView } from 'react-native-markdown-view';
+import { Principle } from '../../types/Lesson';
 
 export default class DoctrinePage extends Component<{
-  screenProps: {
-    doctrine: {
-      markdown: string,
+  navigation: {
+    state: {
+      params: {
+        principle: Principle,
+      },
     },
   },
 }> {
   dummy = () => {};
   render() {
+    const { doctrine } = this.props.navigation.state.params.principle;
+
     return (
       <Content padder>
         <MarkdownView style={styles.markdownContainer} styles={styles.markdown}>
-          {this.props.screenProps.doctrine.markdown}
+          {doctrine.markdown}
         </MarkdownView>
       </Content>
     );

@@ -1,16 +1,20 @@
 import React from 'react';
 import { Content } from 'native-base';
-import { ScriptureGroup } from '../../types/Lesson';
+import { Principle } from '../../types/Lesson';
 import ScriptureGroupComponent from './ScriptureGroupComponent';
 
 type Props = {
-  screenProps: {
-    scriptureGroups: ScriptureGroup[],
+  navigation: {
+    state: {
+      params: {
+        principle: Principle,
+      },
+    },
   },
 };
 
 export default function ScripturesPage(props: Props) {
-  const { scriptureGroups } = props.screenProps;
+  const { scriptureGroups } = props.navigation.state.params.principle;
   return (
     <Content padder>
       {scriptureGroups.map(scriptureGroup => (

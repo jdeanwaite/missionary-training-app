@@ -1,4 +1,5 @@
 {
+  "id": "1",
   "name": "God Is Our Loving Heavenly Father",
   "doctrine": {
     "markdown":
@@ -8,6 +9,10 @@
     "instruction": {
       "markdown":
         "# What we teach\u2026\r\nGod is your Father in Heaven. He knows you personally and loves you more than you can comprehend. He wants you to be happy in this life and in eternity.\r\n\r\nTo accomplish this purpose, Heavenly Father provided a plan called the gospel of Jesus Christ. Jesus Christ is the Son of God; His life and teachings are the guide to peace in this life and joy in eternity."
+    },
+    "pointsToTeach": {
+      "markdown":
+        "* Everyone is a child of God.\r\n* God wants us to be happy. \r\n* Another important principle."
     }
   },
   "videos": [
@@ -75,5 +80,36 @@
         }
       ]
     }
-  ]
+  ],
+  "quiz": {
+    "questions": [
+      {
+        "type": "multiple_choice",
+        "question": "What is the average air speed velocity of a laden swallow?",
+        "options": [
+          {
+            "id": "1",
+            "text": "24.6"
+          },
+          {
+            "id": "2",
+            "text": "10"
+          },
+          {
+            "id": "3",
+            "text": "34.6"
+          },
+          {
+            "id": "4",
+            "text": "What do you mean, an African or European Swallow?"
+          }
+        ],
+        "correctAnswerId": "4"
+      },
+      {
+        "type": "free_response",
+        "question": "What would you do for a Klondike bar?"
+      }
+    ]
+  }
 }

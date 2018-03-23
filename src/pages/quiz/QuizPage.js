@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { AsyncStorage, StyleSheet } from 'react-native';
-import { View, Button, H1, H3, Text, Body } from 'native-base';
+import { View, Button, H1, H3, Text } from 'native-base';
 import { CircularProgress } from 'react-native-circular-progress';
+import { withNavigation } from 'react-navigation';
 import variables from '../../theme/native-base-theme/variables/platform';
 
-export default class QuizPage extends Component<{}> {
+class QuizPage extends Component<{
+  navigation: any,
+}> {
   constructor(props) {
     super(props);
     this.getBestScore();
@@ -41,6 +44,16 @@ export default class QuizPage extends Component<{}> {
     this.getBestScore();
   };
 
+  startQuiz = () => {
+    const { navigation } = this.props;
+    const { quiz } = this.props.navigation.state.params.principle;
+
+    navigation.navigate('quizQuestionFlow', {
+      index: 1,
+      questions: quiz.questions,
+    });
+  };
+
   render() {
     const tintColor = this.state.bestScore >= 100 ? variables.brandSuccess : '#FFC400';
     let prompt;
@@ -70,7 +83,7 @@ export default class QuizPage extends Component<{}> {
             style={{ minWidth: 200, justifyContent: 'center' }}
             rounded
             success
-            onPress={() => this.saveScore(this.state.bestScore + 10)}
+            onPress={this.startQuiz}
           >
             <Text>Take Quiz</Text>
           </Button>
@@ -79,6 +92,8 @@ export default class QuizPage extends Component<{}> {
     );
   }
 }
+
+export default withNavigation(QuizPage);
 
 async function getQuizScores(): number[] {
   let quizScores;
