@@ -22,14 +22,11 @@
     "react-native": "0.54.2",
     "react-native-camera": "https://github.com/react-native-community/react-native-camera#32e6ccc",
     "react-native-circular-progress": "0.2.0",
-    "react-native-lightbox": "0.7.0",
+    "react-native-fs": "2.9.11",
     "react-native-markdown-view": "1.1.4",
-    "react-native-modal": "5.3.0",
     "react-native-swipe-gestures": "1.0.2",
     "react-native-vector-icons": "4.5.0",
     "react-native-video": "2.0.0",
-    "react-native-video-controls": "2.1.0",
-    "react-native-video-player": "https://github.com/ShariqMush/react-native-fullscreenvideo-player.git",
     "react-navigation": "1.5.1"
   },
   "devDependencies": {
