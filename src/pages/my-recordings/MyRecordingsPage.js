@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
-export default class MyRecordingsPage extends Component<{}> {
+class MyRecordingsPage extends Component<{}> {
+  viewRecording = (recording) => {};
+
   render() {
     return (
       <View>
@@ -10,3 +12,9 @@ export default class MyRecordingsPage extends Component<{}> {
     );
   }
 }
+
+export default function withRecordings(props) {
+  return <MyRecordingsPage props={{ ...props }} />;
+}
+
+function getRecordingsFromCache() {}

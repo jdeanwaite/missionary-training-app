@@ -18,6 +18,9 @@ import QuizSummaryPage from '../pages/quiz/QuizSummaryPage';
 import NewNotePage from '../pages/notes/NewNotePage';
 import NewRecordingPage from '../pages/recording/NewRecordingPage';
 import RecordPage from '../pages/recording/RecordPage';
+import ReviewRecordingInstructionPage from '../pages/recording/ReviewRecordingInstructionPage';
+import ViewRecordingPage from '../pages/recording/ViewRecordingPage';
+import ShareRecordingPage from '../pages/recording/ShareRecordingPage';
 
 const LearnTabNavigator = TabNavigator(
   {
@@ -187,6 +190,24 @@ export default StackNavigator(
                   screen: RecordPage,
                   navigationOptions: {
                     header: null,
+                  },
+                },
+                ReviewRecordingInstruction: {
+                  screen: ReviewRecordingInstructionPage,
+                  navigationOptions: {
+                    headerTitle: 'Video Review',
+                  },
+                },
+                ViewRecording: {
+                  screen: ViewRecordingPage,
+                  navigationOptions: {
+                    header: null,
+                  },
+                },
+                ShareRecording: {
+                  screen: ShareRecordingPage,
+                  navigationOptions: {
+                    headerTitle: 'Finish',
                   },
                 },
               },

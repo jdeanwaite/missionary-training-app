@@ -25,7 +25,6 @@ export default class NewRecordingPage extends Component<Props> {
   };
 
   render() {
-    console.log(this.props);
     const { teach } = this.props.navigation.state.params.principle;
 
     return (

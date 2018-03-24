@@ -1,5 +1,3 @@
 {
-  "presets": ["react-native", "flow"],
-  "retainLines": true,
-  "sourceMaps": true
+  "presets": ["react-native"]
 }

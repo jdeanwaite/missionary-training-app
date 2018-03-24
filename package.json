@@ -20,6 +20,7 @@
     "react": "16.3.0-alpha.1",
     "react-apollo": "^2.0.4",
     "react-native": "0.54.2",
+    "react-native-camera": "https://github.com/react-native-community/react-native-camera#32e6ccc",
     "react-native-circular-progress": "0.2.0",
     "react-native-lightbox": "0.7.0",
     "react-native-markdown-view": "1.1.4",
