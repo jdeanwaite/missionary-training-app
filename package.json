@@ -11,6 +11,9 @@
     "flow-coverage": "flow coverage"
   },
   "dependencies": {
+    "appcenter": "1.4.0",
+    "appcenter-analytics": "1.4.0",
+    "appcenter-crashes": "1.4.0",
     "aws-appsync": "^1.0.3",
     "aws-appsync-react": "^1.0.2",
     "aws-sdk": "^2.173.0",
