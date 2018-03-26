@@ -15,7 +15,7 @@ export default class ShareRecordingPage extends Component<Props> {
     return (
       <View padder style={{ flex: 1, justifyContent: 'space-between' }}>
         <Text>
-          Great job! You can bo back and view this recording at any time. Just visit the My
+          Great job! You can go back and view this recording at any time. Just visit the My
           Recordings tab.
         </Text>
         <Button success block onPress={this.dismiss}>

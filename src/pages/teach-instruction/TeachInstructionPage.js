@@ -20,7 +20,15 @@ export default class TeachInstructionPage extends Component<Props> {
   newVideoRecording = () => {
     const { principle } = this.props.navigation.state.params;
     console.log('navigating');
-    this.props.navigation.navigate('newRecordingFlow', { principle });
+    this.props.navigation.navigate(
+      'newRecordingFlow',
+      {},
+      {
+        type: 'Navigate',
+        routeName: 'NewRecording',
+        params: { principle },
+      },
+    );
   };
 
   render() {

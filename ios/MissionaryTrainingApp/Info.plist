@@ -68,5 +68,9 @@
 		<string>Feather.ttf</string>
 		<string>MaterialCommunityIcons.ttf</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera will be used for practice teaching videos.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>The microphone will be used for practice teaching videos.</string>
 </dict>
 </plist>

@@ -224,6 +224,41 @@ export default StackNavigator(
               header: null,
             },
           },
+          reviewRecordingFlow: {
+            screen: DismissableStackNavigator(
+              {
+                ReviewRecordingInstruction: {
+                  screen: ReviewRecordingInstructionPage,
+                  navigationOptions: {
+                    headerTitle: 'Video Review',
+                  },
+                },
+                ViewRecording: {
+                  screen: ViewRecordingPage,
+                  navigationOptions: {
+                    header: null,
+                  },
+                },
+                ShareRecording: {
+                  screen: ShareRecordingPage,
+                  navigationOptions: {
+                    headerTitle: 'Finish',
+                  },
+                },
+              },
+              {
+                navigationOptions: {
+                  headerStyle: {
+                    backgroundColor: '#00BCD4',
+                  },
+                  headerTintColor: '#ffffff',
+                },
+              },
+            ),
+            navigationOptions: {
+              header: null,
+            },
+          },
         },
         {
           initialRouteName: 'Home',
