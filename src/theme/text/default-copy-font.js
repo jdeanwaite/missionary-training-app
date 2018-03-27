@@ -1,6 +1,8 @@
+import { Platform } from 'react-native';
+
 const defaultCopyFont = {
-  fontSize: 18,
-  fontFamily: 'serif',
+  fontSize: Platform.OS === 'ios' ? 20 : 18,
+  fontFamily: Platform.OS === 'ios' ? 'Times New Roman' : 'serif',
   lineHeight: 28,
 };
 

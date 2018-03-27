@@ -92,9 +92,10 @@ export default class RecordPage extends Component<Props> {
           ref={(ref) => {
             this.camera = ref;
           }}
+          autoFocus
           onCameraReady={this.prepareRatio}
           ratio={this.state.ratio}
-          style={[styles.preview, !this.state.ratio && styles.hidden]}
+          style={[styles.preview, !this.state.ratio && Platform.OS !== 'ios' && styles.hidden]}
           type={RNCamera.Constants.Type.front}
           flashMode={RNCamera.Constants.FlashMode.off}
           permissionDialogTitle="Permission to use camera"
