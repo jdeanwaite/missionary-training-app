@@ -141,6 +141,9 @@ export default class QuizQuestionPage extends Component<Props> {
             )}
           </Content>
           <View style={styles.actionContainer}>
+            <Button dark transparent style={styles.quitButton} onPress={this.onQuitPressed}>
+              <Text>Quit</Text>
+            </Button>
             <Button
               success={this.state.submitted && correct}
               info={!this.state.submitted || !correct}
@@ -149,9 +152,6 @@ export default class QuizQuestionPage extends Component<Props> {
               disabled={!nextButtonActive}
             >
               <Text>{nextButtonText}</Text>
-            </Button>
-            <Button dark transparent style={styles.quitButton} onPress={this.onQuitPressed}>
-              <Text>Quit</Text>
             </Button>
           </View>
         </Container>
