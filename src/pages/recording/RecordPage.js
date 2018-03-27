@@ -6,6 +6,7 @@ import {
   View,
   Text,
   Platform,
+  SafeAreaView,
 } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { RNCamera } from 'react-native-camera';
@@ -101,21 +102,33 @@ export default class RecordPage extends Component<Props> {
           permissionDialogTitle="Permission to use camera"
           permissionDialogMessage="We need your permission to use your camera phone"
         />
-        <View style={styles.topActions}>
-          <TouchableOpacity onPress={this.cancel} style={styles.close}>
-            <MaterialIcon size={32} name="close" color="white" />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.bottomActions}>
-          {!this.state.recording && (
-            <TouchableOpacity onPress={this.beginRecording} style={[styles.capture]} />
-          )}
-          {this.state.recording && (
-            <TouchableHighlight onPress={this.stopRecording} style={styles.stop}>
-              <MaterialIcon size={64} name="stop" color="white" />
-            </TouchableHighlight>
-          )}
-        </View>
+        <SafeAreaView
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+        >
+          <View style={{ flex: 1 }}>
+            <View style={styles.topActions}>
+              <TouchableOpacity onPress={this.cancel} style={styles.close}>
+                <MaterialIcon size={32} name="close" color="white" />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.bottomActions}>
+              {!this.state.recording && (
+                <TouchableOpacity onPress={this.beginRecording} style={[styles.capture]} />
+              )}
+              {this.state.recording && (
+                <TouchableHighlight onPress={this.stopRecording} style={styles.stop}>
+                  <MaterialIcon size={64} name="stop" color="white" />
+                </TouchableHighlight>
+              )}
+            </View>
+          </View>
+        </SafeAreaView>
       </View>
     );
   }

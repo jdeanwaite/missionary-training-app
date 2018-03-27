@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
-import { StackNavigator, TabNavigator, TabBarBottom, TabBarTop } from 'react-navigation';
+import { TouchableOpacity, Text } from 'react-native';
+import { StackNavigator, TabNavigator, TabBarBottom, TabBarTop, Header } from 'react-navigation';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import HomePage from '../pages/home/HomePage';
 import QuizQuestionPage from '../pages/quiz/QuizQuestionPage';
@@ -21,6 +22,7 @@ import RecordPage from '../pages/recording/RecordPage';
 import ReviewRecordingInstructionPage from '../pages/recording/ReviewRecordingInstructionPage';
 import ViewRecordingPage from '../pages/recording/ViewRecordingPage';
 import ShareRecordingPage from '../pages/recording/ShareRecordingPage';
+import DismissableTabNavigator from './DismissableTabNavigation';
 
 const LearnTabNavigator = TabNavigator(
   {
@@ -112,7 +114,7 @@ const TeachTabNavigator = TabNavigator(
   },
 );
 
-const PrincipleTabNavigator = TabNavigator(
+const PrincipleTabNavigator = DismissableTabNavigator(
   {
     Learn: {
       screen: LearnTabNavigator,
@@ -142,12 +144,107 @@ const PrincipleTabNavigator = TabNavigator(
         height: 2,
       },
     },
-    navigationOptions: ({ navigation }) => {
+    navigationOptions: ({ navigation, screenProps }) => {
       const { params } = navigation.state;
 
       return {
-        header: <HeaderWithTabs navigation={navigation} params={params} />,
+        header: (
+          <HeaderWithTabs navigation={navigation} params={params} screenProps={screenProps} />
+        ),
       };
+    },
+  },
+);
+
+const QuizQuestionStackNavigator = DismissableStackNavigator(
+  {
+    QuizQuestion: { screen: QuizQuestionPage },
+    QuizSummary: { screen: QuizSummaryPage },
+  },
+  {
+    navigationOptions: {
+      header: null,
+      headerMode: 'none',
+    },
+  },
+);
+
+const NewRecordingStackNavigator = DismissableStackNavigator(
+  {
+    NewRecording: {
+      screen: NewRecordingPage,
+      navigationOptions: ({ screenProps }) => ({
+        headerTitle: 'Practice Teaching',
+        headerLeft: (
+          <TouchableOpacity onPress={() => screenProps.dismiss()}>
+            <Text style={{ paddingLeft: 16, color: 'white' }}>Close</Text>
+          </TouchableOpacity>
+        ),
+        headerRight: null,
+      }),
+    },
+    Record: {
+      screen: RecordPage,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    ReviewRecordingInstruction: {
+      screen: ReviewRecordingInstructionPage,
+      navigationOptions: {
+        headerTitle: 'Video Review',
+      },
+    },
+    ViewRecording: {
+      screen: ViewRecordingPage,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    ShareRecording: {
+      screen: ShareRecordingPage,
+      navigationOptions: {
+        headerTitle: 'Finish',
+      },
+    },
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#00BCD4',
+      },
+      headerTintColor: '#ffffff',
+    },
+  },
+);
+
+const ReviewRecordingStackNavigator = DismissableStackNavigator(
+  {
+    ReviewRecordingInstruction: {
+      screen: ReviewRecordingInstructionPage,
+      navigationOptions: {
+        headerTitle: 'Video Review',
+      },
+    },
+    ViewRecording: {
+      screen: ViewRecordingPage,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    ShareRecording: {
+      screen: ShareRecordingPage,
+      navigationOptions: {
+        headerTitle: 'Finish',
+      },
+    },
+  },
+  {
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#00BCD4',
+      },
+      headerTintColor: '#ffffff',
     },
   },
 );
@@ -165,117 +262,21 @@ export default StackNavigator(
           },
           Principle: {
             screen: PrincipleTabNavigator,
-          },
-          quizQuestionFlow: {
-            screen: DismissableStackNavigator(
-              {
-                QuizQuestion: { screen: QuizQuestionPage },
-                QuizSummary: { screen: QuizSummaryPage },
-              },
-              {
-                navigationOptions: {
-                  header: null,
-                  headerMode: 'none',
-                },
-              },
-            ),
-            navigationOptions: {
-              header: null,
-              headerMode: 'none',
-            },
-          },
-          NewNote: {
-            screen: NewNotePage,
-            navigationOptions: {
-              headerTitle: 'New Note',
-            },
-          },
-          newRecordingFlow: {
-            screen: DismissableStackNavigator(
-              {
-                NewRecording: {
-                  screen: NewRecordingPage,
-                  navigationOptions: {
-                    headerTitle: 'Practice Teaching Instructions',
-                  },
-                },
-                Record: {
-                  screen: RecordPage,
-                  navigationOptions: {
-                    header: null,
-                  },
-                },
-                ReviewRecordingInstruction: {
-                  screen: ReviewRecordingInstructionPage,
-                  navigationOptions: {
-                    headerTitle: 'Video Review',
-                  },
-                },
-                ViewRecording: {
-                  screen: ViewRecordingPage,
-                  navigationOptions: {
-                    header: null,
-                  },
-                },
-                ShareRecording: {
-                  screen: ShareRecordingPage,
-                  navigationOptions: {
-                    headerTitle: 'Finish',
-                  },
-                },
-              },
-              {
-                navigationOptions: {
-                  headerStyle: {
-                    backgroundColor: '#00BCD4',
-                  },
-                  headerTintColor: '#ffffff',
-                },
-              },
-            ),
-            navigationOptions: {
-              header: null,
-            },
-          },
-          reviewRecordingFlow: {
-            screen: DismissableStackNavigator(
-              {
-                ReviewRecordingInstruction: {
-                  screen: ReviewRecordingInstructionPage,
-                  navigationOptions: {
-                    headerTitle: 'Video Review',
-                  },
-                },
-                ViewRecording: {
-                  screen: ViewRecordingPage,
-                  navigationOptions: {
-                    header: null,
-                  },
-                },
-                ShareRecording: {
-                  screen: ShareRecordingPage,
-                  navigationOptions: {
-                    headerTitle: 'Finish',
-                  },
-                },
-              },
-              {
-                navigationOptions: {
-                  headerStyle: {
-                    backgroundColor: '#00BCD4',
-                  },
-                  headerTintColor: '#ffffff',
-                },
-              },
-            ),
-            navigationOptions: {
-              header: null,
-            },
+            // navigationOptions: ({ navigation, sreenProps }) => ({
+            //   headerLeft: (
+            //     <Icon
+            //       name="arrow-left"
+            //       onPress={() => {
+            //         navigation.goBack();
+            //       }}
+            //     />
+            //   ),
+            // }),
           },
         },
         {
           initialRouteName: 'Home',
-          mode: 'modal',
+          mode: 'card',
           navigationOptions: {
             headerStyle: {
               backgroundColor: '#00BCD4',
@@ -285,9 +286,49 @@ export default StackNavigator(
         },
       ),
     },
+    quizQuestionFlow: {
+      screen: QuizQuestionStackNavigator,
+      navigationOptions: {
+        header: null,
+        headerMode: 'none',
+      },
+    },
+    newNoteFlow: {
+      screen: new DismissableStackNavigator({
+        NewNote: {
+          screen: NewNotePage,
+          navigationOptions: {
+            headerTitle: 'New Note',
+            headerStyle: {
+              backgroundColor: '#00BCD4',
+            },
+            headerTintColor: '#ffffff',
+          },
+        },
+      }),
+    },
+    newRecordingFlow: {
+      screen: NewRecordingStackNavigator,
+      navigationOptions: {
+        header: null,
+      },
+    },
+    reviewRecordingFlow: {
+      screen: ReviewRecordingStackNavigator,
+      navigationOptions: {
+        header: null,
+      },
+    },
   },
   {
     initialRouteName: 'main',
     headerMode: 'none',
+    mode: 'modal',
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: '#00BCD4',
+      },
+      headerTintColor: '#ffffff',
+    },
   },
 );

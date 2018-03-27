@@ -27,7 +27,7 @@ export default class NewNotePage extends React.Component<Props> {
 
   cancelNote = () => {
     if (!this.state.text) {
-      this.props.navigation.goBack();
+      this.props.screenProps.dismiss();
     } else {
       Alert.alert('Are you sure?', 'Your note will not be saved.', [
         {
@@ -37,7 +37,7 @@ export default class NewNotePage extends React.Component<Props> {
         {
           text: 'Delete',
           onPress: () => {
-            this.props.navigation.goBack();
+            this.props.screenProps.dismiss();
           },
         },
       ]);

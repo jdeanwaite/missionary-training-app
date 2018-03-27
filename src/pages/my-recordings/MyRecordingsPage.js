@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Content, Text, List, ListItem, Body, View, Fab } from 'native-base';
 import { readDir, CachesDirectoryPath } from 'react-native-fs';
+import { Platform } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import variables from '../../theme/native-base-theme/variables/platform';
 
@@ -91,7 +92,9 @@ export default class MyRecordingsPage extends Component<Props> {
 
 async function fetchFiles(): Recording[] {
   try {
-    const results = await readDir(`${CachesDirectoryPath}/Camera`);
+    const videoLocation =
+      Platform.OS === 'ios' ? `${CachesDirectoryPath}Camera` : `${CachesDirectoryPath}/Camera`;
+    const results = await readDir(videoLocation);
     return results.filter(result => result.isFile()).map(result => ({
       title: `${result.mtime.toDateString()} ${result.mtime.toLocaleTimeString()}`,
       uri: result.path,

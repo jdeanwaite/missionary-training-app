@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { TouchableOpacity, StatusBar } from 'react-native';
-import { Text, Content, View, Button } from 'native-base';
+import { TouchableOpacity, StatusBar, Platform } from 'react-native';
+import { Text, Content, View, Button, Header, Icon, Left, Body, Title } from 'native-base';
 import { MarkdownView } from 'react-native-markdown-view';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { Principle } from '../../types/Lesson';
@@ -24,6 +24,12 @@ export default class NewRecordingPage extends Component<Props> {
     const { navigation } = this.props;
     navigation.navigate('Record', { principle });
   };
+
+  // dismiss = () => {
+  //   const { screenProps } = this.props;
+  //   console.log('dismiss');
+  //   screenProps.dismiss();
+  // };
 
   render() {
     const { teach } = this.props.navigation.state.params.principle;
