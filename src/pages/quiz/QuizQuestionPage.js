@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, SafeAreaView } from 'react-native';
 import { H1, H3, Content, Container, Button, View, Text } from 'native-base';
 import MultipleChoiceQuestion from '../../components/MultipleChoiceQuestion';
 import FreeResponse from '../../components/FreeResponse';
@@ -105,53 +105,57 @@ export default class QuizQuestionPage extends Component<Props> {
     }
 
     return (
-      <Container>
-        <StatusBar backgroundColor="#0097A7" barStyle="dark-content" />
-        <Content padder>
-          <H1 style={styles.title}>Question {index}</H1>
-          <H3 style={styles.question}>{question.question}</H3>
-          {question.type === 'multiple_choice' ? (
-            <MultipleChoiceQuestion
-              question={question}
-              selectedAnswerId={this.state.selectedAnswerId}
-              answerSelected={this.onAnswerSelect}
-              disabled={this.state.submitted}
-            />
-          ) : (
-            <FreeResponse
-              text={this.state.freeResponseText}
-              textChanged={this.onTextChanged}
-              disabled={this.state.submitted}
-            />
-          )}
-          {this.state.submitted && (
-            <View
-              style={[styles.feedback, correct ? styles.feedbackSuccess : styles.feedbackFailure]}
-            >
-              <Text
-                style={[
-                  styles.feedbackText,
-                  correct ? styles.feedbackTextSuccess : styles.feedbackTextFailure,
-                ]}
+      <SafeAreaView style={{ flex: 1 }}>
+        <Container>
+          <StatusBar backgroundColor="#0097A7" barStyle="dark-content" />
+          <Content padder>
+            <H1 style={styles.title}>Question {index}</H1>
+            <H3 style={styles.question}>{question.question}</H3>
+            {question.type === 'multiple_choice' ? (
+              <MultipleChoiceQuestion
+                question={question}
+                selectedAnswerId={this.state.selectedAnswerId}
+                answerSelected={this.onAnswerSelect}
+                disabled={this.state.submitted}
+              />
+            ) : (
+              <FreeResponse
+                text={this.state.freeResponseText}
+                textChanged={this.onTextChanged}
+                disabled={this.state.submitted}
+              />
+            )}
+            {this.state.submitted && (
+              <View
+                style={[styles.feedback, correct ? styles.feedbackSuccess : styles.feedbackFailure]}
               >
-                {feedbackText}
-              </Text>
-            </View>
-          )}
-        </Content>
-        <Button
-          success={this.state.submitted && correct}
-          info={!this.state.submitted || !correct}
-          style={styles.nextButton}
-          onPress={this.onNextPressed}
-          disabled={!nextButtonActive}
-        >
-          <Text>{nextButtonText}</Text>
-        </Button>
-        <Button dark transparent style={styles.quitButton} onPress={this.onQuitPressed}>
-          <Text>Quit</Text>
-        </Button>
-      </Container>
+                <Text
+                  style={[
+                    styles.feedbackText,
+                    correct ? styles.feedbackTextSuccess : styles.feedbackTextFailure,
+                  ]}
+                >
+                  {feedbackText}
+                </Text>
+              </View>
+            )}
+          </Content>
+          <View style={styles.actionContainer}>
+            <Button
+              success={this.state.submitted && correct}
+              info={!this.state.submitted || !correct}
+              style={styles.nextButton}
+              onPress={this.onNextPressed}
+              disabled={!nextButtonActive}
+            >
+              <Text>{nextButtonText}</Text>
+            </Button>
+            <Button dark transparent style={styles.quitButton} onPress={this.onQuitPressed}>
+              <Text>Quit</Text>
+            </Button>
+          </View>
+        </Container>
+      </SafeAreaView>
     );
   }
 }
@@ -190,14 +194,9 @@ const styles = {
   feedbackTextFailure: {
     color: variables.brandDanger,
   },
-  nextButton: {
-    position: 'absolute',
-    bottom: 16,
-    right: 16,
-  },
-  quitButton: {
-    position: 'absolute',
-    bottom: 16,
-    left: 16,
+  actionContainer: {
+    padding: 16,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
 };
