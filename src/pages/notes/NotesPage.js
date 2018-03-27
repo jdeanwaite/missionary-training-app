@@ -31,11 +31,16 @@ export default class NotesPage extends Component<Props> {
           )}
         </Content>
         <Fab
-          style={{ backgroundColor: variables.brandPrimary }}
+          style={{ backgroundColor: variables.brandInfo }}
           position="bottomRight"
           onPress={this.onFabPress}
         >
-          <MaterialIcon name="note-add" size={25} color="#fff" />
+          <MaterialIcon
+            name="note-add"
+            size={25}
+            color="#fff"
+            style={{ color: 'rgba(0, 0, 0, .75)' }}
+          />
         </Fab>
       </View>
     );

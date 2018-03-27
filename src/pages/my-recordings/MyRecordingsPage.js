@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import {  } from 'react-native';
-import { Content, Text, List, ListItem, Body, View } from 'native-base';
+import { Content, Text, List, ListItem, Body, View, Fab } from 'native-base';
 import { readDir, CachesDirectoryPath } from 'react-native-fs';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import variables from '../../theme/native-base-theme/variables/platform';
 
 type Recording = {
   title: string,
@@ -36,6 +37,19 @@ export default class MyRecordingsPage extends Component<Props> {
     );
   };
 
+  newVideoRecording = () => {
+    const { principle } = this.props.navigation.state.params;
+    this.props.navigation.navigate(
+      'newRecordingFlow',
+      {},
+      {
+        type: 'Navigate',
+        routeName: 'NewRecording',
+        params: { principle },
+      },
+    );
+  };
+
   async loadRecordings() {
     const recordings = await fetchFiles();
     this.setState({ recordings });
@@ -43,25 +57,34 @@ export default class MyRecordingsPage extends Component<Props> {
 
   render() {
     return (
-      <Content>
-        <List>
-          {this.state.recordings.map((r: Recording, index) => (
-            <ListItem key={r.title} onPress={() => this.viewRecording(r.uri)}>
-              <Body>
-                <Text>Recording {index + 1}</Text>
-                <Text note>{r.title}</Text>
-              </Body>
-            </ListItem>
-          ))}
-        </List>
-        <View padder style={{ alignItems: 'center' }}>
-          {!this.state.recordings.length && (
-            <Text style={{ color: 'rgba(0, 0, 0, .54)' }}>
-              {"You don't have any recordings yet."}
-            </Text>
-          )}
-        </View>
-      </Content>
+      <View style={{ flex: 1 }}>
+        <Content>
+          <List>
+            {this.state.recordings.map((r: Recording, index) => (
+              <ListItem key={r.title} onPress={() => this.viewRecording(r.uri)}>
+                <Body>
+                  <Text>Recording {index + 1}</Text>
+                  <Text note>{r.title}</Text>
+                </Body>
+              </ListItem>
+            ))}
+          </List>
+          <View padder style={{ alignItems: 'center' }}>
+            {!this.state.recordings.length && (
+              <Text style={{ color: 'rgba(0, 0, 0, .54)' }}>
+                {"You don't have any recordings yet."}
+              </Text>
+            )}
+          </View>
+        </Content>
+        <Fab
+          style={{ backgroundColor: variables.brandInfo }}
+          position="bottomRight"
+          onPress={this.newVideoRecording}
+        >
+          <MaterialIcon name="videocam" size={25} style={{ color: 'rgba(0, 0, 0, .75)' }} />
+        </Fab>
+      </View>
     );
   }
 }

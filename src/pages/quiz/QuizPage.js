@@ -79,12 +79,7 @@ class QuizPage extends Component<{
         </CircularProgress>
         <Text style={styles.prompt}>{prompt}</Text>
         <View>
-          <Button
-            style={{ minWidth: 200, justifyContent: 'center' }}
-            rounded
-            success
-            onPress={this.startQuiz}
-          >
+          <Button style={{ minWidth: 200, justifyContent: 'center' }} info onPress={this.startQuiz}>
             <Text>Take Quiz</Text>
           </Button>
         </View>

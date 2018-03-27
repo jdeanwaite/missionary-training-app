@@ -93,7 +93,7 @@ export default class QuizQuestionPage extends Component<Props> {
     const nextButtonText = questions.length > index ? 'Next' : 'Finish';
     const nextButtonActive = !!this.state.selectedAnswerId || !!this.state.freeResponseText;
 
-    const correct = this.answerCorrect();
+    const correct = this.answerCorrect() || false;
 
     let feedbackText = '';
     if (question.type === 'free_response') {
@@ -140,7 +140,8 @@ export default class QuizQuestionPage extends Component<Props> {
           )}
         </Content>
         <Button
-          success
+          success={this.state.submitted && correct}
+          info={!this.state.submitted || !correct}
           style={styles.nextButton}
           onPress={this.onNextPressed}
           disabled={!nextButtonActive}

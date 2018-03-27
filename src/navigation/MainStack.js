@@ -73,9 +73,15 @@ const TeachTabNavigator = TabNavigator(
   {
     Instruction: {
       screen: TeachInstructionPage,
+      navigationOptions: {
+        tabBarLabel: 'How To Teach',
+      },
     },
     MyRecordings: {
       screen: MyRecordingsPage,
+      navigationOptions: {
+        tabBarLabel: 'My Recordings',
+      },
     },
   },
   {
@@ -113,6 +119,9 @@ const PrincipleTabNavigator = TabNavigator(
     },
     Teach: {
       screen: TeachTabNavigator,
+      navigationOptions: {
+        tabBarLabel: 'Teach',
+      },
     },
     Notes: {
       screen: NotesPage,
@@ -127,6 +136,10 @@ const PrincipleTabNavigator = TabNavigator(
     tabBarOptions: {
       style: {
         backgroundColor: '#00BCD4',
+      },
+      indicatorStyle: {
+        backgroundColor: variables.brandInfo,
+        height: 2,
       },
     },
     navigationOptions: ({ navigation }) => {
@@ -183,7 +196,7 @@ export default StackNavigator(
                 NewRecording: {
                   screen: NewRecordingPage,
                   navigationOptions: {
-                    headerTitle: 'Practice Teaching',
+                    headerTitle: 'Practice Teaching Instructions',
                   },
                 },
                 Record: {

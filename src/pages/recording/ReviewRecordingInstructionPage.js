@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Text, Content, View } from 'native-base';
+import { Text, Content, View, Button } from 'native-base';
 import { MarkdownView } from 'react-native-markdown-view';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import variables from '../../theme/native-base-theme/variables/platform';
+import instructionFont from '../../theme/text/instruction-font';
 
 type Props = {
   navigation: any,
@@ -22,30 +23,40 @@ export default class ReviewRecordingInstructionPage extends Component<Props> {
     const { teach } = this.props.navigation.state.params.principle;
 
     return (
-      <Content padder>
-        <Text>Now review your practice video. Did you teach the following principles?</Text>
+      <Content style={styles.container}>
+        <Text style={styles.text}>
+          Now review your practice video. Did you teach the following principles?
+        </Text>
         <MarkdownView style={styles.markdownContainer} styles={styles.markdown}>
           {teach.pointsToTeach.markdown}
         </MarkdownView>
-        <Text>When you are ready to watch, press the play button.</Text>
-        <View style={{ alignItems: 'center', marginTop: 32 }}>
+        <View>
+          <Button info block onPress={this.next}>
+            <Text>Review</Text>
+          </Button>
+        </View>
+        {/* <View style={{ alignItems: 'center', marginTop: 32 }}>
           <TouchableOpacity style={styles.playButton} onPress={this.next}>
             <MaterialIcon name="play-arrow" size={96} color={variables.brandSuccess} />
           </TouchableOpacity>
-        </View>
+        </View> */}
       </Content>
     );
   }
 }
 
 const styles = {
+  container: {
+    padding: 20,
+  },
   markdownContainer: {
     marginBottom: 16,
     marginTop: 16,
   },
+  text: { ...instructionFont },
   markdown: {
     heading: {
-      fontWeight: '400',
+      fontWeight: '500',
     },
     heading1: {
       fontSize: 24,
@@ -54,9 +65,12 @@ const styles = {
       fontSize: 20,
       fontWeight: '500',
     },
-    paragraph: {
-      fontSize: 16,
-    },
+    paragraph: { ...instructionFont },
+    listItem: { marginBottom: 8 },
+    listItemNumber: { ...instructionFont },
+    listItemBullet: { ...instructionFont },
+    listItemOrderedContent: { ...instructionFont },
+    listItemUnorderedContent: { ...instructionFont },
   },
   playButton: {
     width: 160,

@@ -53,14 +53,14 @@ export default class ViewRecordingPage extends Component<Props> {
           resizeMode="contain"
           onEnd={this.finishReviewing}
         />
-        <View style={styles.bottomActions}>
+        {/* <View style={styles.bottomActions}>
           <TouchableOpacity onPress={this.cancel} style={styles.finish}>
             <MaterialIcon size={32} name="arrow-back" color="white" />
           </TouchableOpacity>
           <TouchableOpacity onPress={this.finish} style={styles.finish}>
             <MaterialIcon size={32} name="arrow-forward" color="white" />
           </TouchableOpacity>
-        </View>
+        </View> */}
       </View>
     );
   }

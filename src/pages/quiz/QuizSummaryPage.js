@@ -58,7 +58,7 @@ export default class QuizSummaryPage extends React.Component<Props> {
           >
             {() => <H1 style={styles.score}>{this.state.score}</H1>}
           </AnimatedCircularProgress>
-          <Button style={styles.finishButton} block success onPress={this.finish}>
+          <Button block info onPress={this.finish}>
             <Text>Finish</Text>
           </Button>
         </View>

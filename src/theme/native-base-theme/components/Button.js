@@ -12,8 +12,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.brandDark,
-    }
-  }
+    },
+  };
   const lightCommon = {
     'NativeBase.Text': {
       color: variables.brandLight,
@@ -23,8 +23,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.brandLight,
-    }
-  }
+    },
+  };
   const primaryCommon = {
     'NativeBase.Text': {
       color: variables.btnPrimaryBg,
@@ -34,8 +34,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnPrimaryBg,
-    }
-  }
+    },
+  };
   const successCommon = {
     'NativeBase.Text': {
       color: variables.btnSuccessBg,
@@ -45,8 +45,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnSuccessBg,
-    }
-  }
+    },
+  };
   const infoCommon = {
     'NativeBase.Text': {
       color: variables.btnInfoBg,
@@ -56,8 +56,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnInfoBg,
-    }
-  }
+    },
+  };
   const warningCommon = {
     'NativeBase.Text': {
       color: variables.btnWarningBg,
@@ -67,8 +67,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnWarningBg,
-    }
-  }
+    },
+  };
   const dangerCommon = {
     'NativeBase.Text': {
       color: variables.btnDangerBg,
@@ -78,8 +78,8 @@ export default (variables = variable) => {
     },
     'NativeBase.IconNB': {
       color: variables.btnDangerBg,
-    }
-  }
+    },
+  };
   const buttonTheme = {
     '.disabled': {
       backgroundColor: variables.btnDisabledBg,
@@ -165,7 +165,7 @@ export default (variables = variable) => {
 
     '.primary': {
       '.bordered': {
-        ...primaryCommon
+        ...primaryCommon,
       },
       backgroundColor: variables.btnPrimaryBg,
     },
@@ -179,7 +179,10 @@ export default (variables = variable) => {
 
     '.info': {
       '.bordered': {
-        ...infoCommon
+        ...infoCommon,
+      },
+      'NativeBase.Text': {
+        color: variable.textColor,
       },
       backgroundColor: variables.btnInfoBg,
     },
@@ -345,8 +348,7 @@ export default (variables = variable) => {
     flexDirection: 'row',
     elevation: 2,
     shadowColor: platformStyle === 'material' ? variables.brandDark : undefined,
-    shadowOffset:
-      platformStyle === 'material' ? { width: 0, height: 2 } : undefined,
+    shadowOffset: platformStyle === 'material' ? { width: 0, height: 2 } : undefined,
     shadowOpacity: platformStyle === 'material' ? 0.2 : undefined,
     shadowRadius: platformStyle === 'material' ? 1.2 : undefined,
     alignItems: 'center',

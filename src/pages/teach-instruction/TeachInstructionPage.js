@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Content, Fab, View } from 'native-base';
 import { MarkdownView } from 'react-native-markdown-view';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import { Principle } from '../../types/Lesson';
 import variables from '../../theme/native-base-theme/variables/platform';
+import { Principle } from '../../types/Lesson';
+import defaultCopyFont from '../../theme/text/default-copy-font';
 
 type Props = {
   navigation: {
@@ -37,17 +38,22 @@ export default class TeachInstructionPage extends Component<Props> {
 
     return (
       <View style={{ flex: 1 }}>
-        <Content padder>
+        <Content>
           <MarkdownView style={styles.markdownContainer} styles={styles.markdown}>
             {teach.instruction.markdown}
           </MarkdownView>
         </Content>
         <Fab
-          style={{ backgroundColor: variables.brandPrimary }}
+          style={{ backgroundColor: variables.brandInfo }}
           position="bottomRight"
           onPress={this.newVideoRecording}
         >
-          <MaterialIcon name="videocam" size={25} color="#fff" />
+          <MaterialIcon
+            name="videocam"
+            size={25}
+            color="#000"
+            style={{ color: 'rgba(0, 0, 0, .75)' }}
+          />
         </Fab>
       </View>
     );
@@ -56,11 +62,12 @@ export default class TeachInstructionPage extends Component<Props> {
 
 const styles = {
   markdownContainer: {
-    paddingBottom: 24,
+    padding: 20,
+    paddingBottom: 64,
   },
   markdown: {
     heading: {
-      fontWeight: '400',
+      fontWeight: '500',
     },
     heading1: {
       fontSize: 24,
@@ -69,8 +76,11 @@ const styles = {
       fontSize: 20,
       fontWeight: '500',
     },
-    paragraph: {
-      fontSize: 16,
-    },
+    paragraph: { ...defaultCopyFont },
+    listItem: { marginBottom: 16 },
+    listItemNumber: { ...defaultCopyFont },
+    listItemBullet: { ...defaultCopyFont },
+    listItemOrderedContent: { ...defaultCopyFont, ...{ fontWeight: '500' } },
+    listItemUnorderedContent: { ...defaultCopyFont, ...{ fontWeight: '500' } },
   },
 };

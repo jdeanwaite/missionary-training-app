@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, StatusBar } from 'react-native';
-import { Text, Content, View } from 'native-base';
+import { Text, Content, View, Button } from 'native-base';
 import { MarkdownView } from 'react-native-markdown-view';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { Principle } from '../../types/Lesson';
 import variables from '../../theme/native-base-theme/variables/platform';
+import instructionFont from '../../theme/text/instruction-font';
 
 type Props = {
   navigation: {
@@ -28,30 +29,40 @@ export default class NewRecordingPage extends Component<Props> {
     const { teach } = this.props.navigation.state.params.principle;
 
     return (
-      <Content padder>
-        <Text>While you are teaching, make sure to cover these important principles:</Text>
+      <Content style={styles.container}>
+        <Text style={styles.text}>
+          While you are teaching, make sure to cover these important principles:
+        </Text>
         <MarkdownView style={styles.markdownContainer} styles={styles.markdown}>
           {teach.pointsToTeach.markdown}
         </MarkdownView>
-        <Text>When you are ready to record, press the green button.</Text>
-        <View style={{ alignItems: 'center', marginTop: 32 }}>
+        <View>
+          <Button info block onPress={this.goToRecordPage}>
+            <Text>Ready!</Text>
+          </Button>
+        </View>
+        {/* <View style={{ alignItems: 'center', marginTop: 32 }}>
           <TouchableOpacity style={styles.recordButton} onPress={this.goToRecordPage}>
             <MaterialIcon name="videocam" size={96} color={variables.brandSuccess} />
           </TouchableOpacity>
-        </View>
+        </View> */}
       </Content>
     );
   }
 }
 
 const styles = {
+  container: {
+    padding: 20,
+  },
   markdownContainer: {
     marginBottom: 16,
     marginTop: 16,
   },
+  text: { ...instructionFont },
   markdown: {
     heading: {
-      fontWeight: '400',
+      fontWeight: '500',
     },
     heading1: {
       fontSize: 24,
@@ -60,9 +71,12 @@ const styles = {
       fontSize: 20,
       fontWeight: '500',
     },
-    paragraph: {
-      fontSize: 16,
-    },
+    paragraph: { ...instructionFont },
+    listItem: { marginBottom: 8 },
+    listItemNumber: { ...instructionFont },
+    listItemBullet: { ...instructionFont },
+    listItemOrderedContent: { ...instructionFont },
+    listItemUnorderedContent: { ...instructionFont },
   },
   recordButton: {
     width: 160,

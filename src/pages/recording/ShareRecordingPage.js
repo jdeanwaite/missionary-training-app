@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, View, Button } from 'native-base';
+import instructionFont from '../../theme/text/instruction-font';
 
 type Props = {
   navigation: any,
@@ -13,12 +14,12 @@ export default class ShareRecordingPage extends Component<Props> {
 
   render() {
     return (
-      <View padder style={{ flex: 1, justifyContent: 'space-between' }}>
-        <Text>
+      <View style={{ padding: 20, flex: 1 }}>
+        <Text style={[instructionFont, { marginBottom: 16 }]}>
           Great job! You can go back and view this recording at any time. Just visit the My
           Recordings tab.
         </Text>
-        <Button success block onPress={this.dismiss}>
+        <Button info block onPress={this.dismiss}>
           <Text>Finish</Text>
         </Button>
       </View>
