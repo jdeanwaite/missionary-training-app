@@ -13,4 +13,6 @@ target 'MissionaryTrainingApp' do
   
 
   platform :ios, '9.0'
+  pod 'RNAWSCognito', :path => '../node_modules/amazon-cognito-identity-js'
+
 end

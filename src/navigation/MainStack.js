@@ -1,7 +1,15 @@
 // @flow
 import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
-import { StackNavigator, TabNavigator, TabBarBottom, TabBarTop, Header } from 'react-navigation';
+import {
+  StackNavigator,
+  TabNavigator,
+  TabBarBottom,
+  TabBarTop,
+  Header,
+  SwitchNavigator,
+} from 'react-navigation';
+import { connect } from 'react-redux';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import HomePage from '../pages/home/HomePage';
 import QuizQuestionPage from '../pages/quiz/QuizQuestionPage';
@@ -23,6 +31,8 @@ import ReviewRecordingInstructionPage from '../pages/recording/ReviewRecordingIn
 import ViewRecordingPage from '../pages/recording/ViewRecordingPage';
 import ShareRecordingPage from '../pages/recording/ShareRecordingPage';
 import DismissableTabNavigator from './DismissableTabNavigation';
+import SignIn from '../pages/authentication/SignIn';
+import { AuthState } from '../types/AuthState';
 
 const LearnTabNavigator = TabNavigator(
   {
@@ -249,86 +259,118 @@ const ReviewRecordingStackNavigator = DismissableStackNavigator(
   },
 );
 
-export default StackNavigator(
-  {
-    main: {
-      screen: StackNavigator(
-        {
-          Home: {
-            screen: HomePage,
+const createMainStack = authState =>
+  SwitchNavigator(
+    {
+      unauthenticated: {
+        screen: StackNavigator(
+          {
+            SignIn: {
+              screen: SignIn,
+              navigationOptions: {
+                headerTitle: 'Sign In',
+              },
+            },
+          },
+          {
             navigationOptions: {
-              headerTitle: 'Missionary Training App',
+              headerStyle: {
+                backgroundColor: '#00BCD4',
+              },
+              headerTintColor: '#ffffff',
             },
           },
-          Principle: {
-            screen: PrincipleTabNavigator,
-            // navigationOptions: ({ navigation, sreenProps }) => ({
-            //   headerLeft: (
-            //     <Icon
-            //       name="arrow-left"
-            //       onPress={() => {
-            //         navigation.goBack();
-            //       }}
-            //     />
-            //   ),
-            // }),
-          },
-        },
-        {
-          initialRouteName: 'Home',
-          mode: 'card',
-          navigationOptions: {
-            headerStyle: {
-              backgroundColor: '#00BCD4',
+        ),
+      },
+      authenticated: {
+        screen: StackNavigator(
+          {
+            Home: {
+              screen: HomePage,
+              navigationOptions: {
+                headerTitle: 'Missionary Training App',
+              },
             },
-            headerTintColor: '#ffffff',
-          },
-        },
-      ),
-    },
-    quizQuestionFlow: {
-      screen: QuizQuestionStackNavigator,
-      navigationOptions: {
-        header: null,
-        headerMode: 'none',
-      },
-    },
-    newNoteFlow: {
-      screen: new DismissableStackNavigator({
-        NewNote: {
-          screen: NewNotePage,
-          navigationOptions: {
-            headerTitle: 'New Note',
-            headerStyle: {
-              backgroundColor: '#00BCD4',
+            Principle: {
+              screen: PrincipleTabNavigator,
+              // navigationOptions: ({ navigation, sreenProps }) => ({
+              //   headerLeft: (
+              //     <Icon
+              //       name="arrow-left"
+              //       onPress={() => {
+              //         navigation.goBack();
+              //       }}
+              //     />
+              //   ),
+              // }),
             },
-            headerTintColor: '#ffffff',
           },
+          {
+            initialRouteName: 'Home',
+            mode: 'card',
+            navigationOptions: {
+              headerStyle: {
+                backgroundColor: '#00BCD4',
+              },
+              headerTintColor: '#ffffff',
+            },
+          },
+        ),
+      },
+      quizQuestionFlow: {
+        screen: QuizQuestionStackNavigator,
+        navigationOptions: {
+          header: null,
+          headerMode: 'none',
         },
-      }),
+      },
+      newNoteFlow: {
+        screen: new DismissableStackNavigator({
+          NewNote: {
+            screen: NewNotePage,
+            navigationOptions: {
+              headerTitle: 'New Note',
+              headerStyle: {
+                backgroundColor: '#00BCD4',
+              },
+              headerTintColor: '#ffffff',
+            },
+          },
+        }),
+      },
+      newRecordingFlow: {
+        screen: NewRecordingStackNavigator,
+        navigationOptions: {
+          header: null,
+        },
+      },
+      reviewRecordingFlow: {
+        screen: ReviewRecordingStackNavigator,
+        navigationOptions: {
+          header: null,
+        },
+      },
     },
-    newRecordingFlow: {
-      screen: NewRecordingStackNavigator,
+    {
+      initialRouteName: authState === 'signedIn' ? 'authenticated' : 'unauthenticated',
+      headerMode: 'none',
+      mode: 'modal',
       navigationOptions: {
-        header: null,
+        headerStyle: {
+          backgroundColor: '#00BCD4',
+        },
+        headerTintColor: '#ffffff',
       },
     },
-    reviewRecordingFlow: {
-      screen: ReviewRecordingStackNavigator,
-      navigationOptions: {
-        header: null,
-      },
-    },
-  },
-  {
-    initialRouteName: 'main',
-    headerMode: 'none',
-    mode: 'modal',
-    navigationOptions: {
-      headerStyle: {
-        backgroundColor: '#00BCD4',
-      },
-      headerTintColor: '#ffffff',
-    },
-  },
-);
+  );
+
+const MainStack = (props: { authState: AuthState }) => {
+  const Stack = createMainStack(props.authState);
+  return <Stack />;
+};
+
+const mapStateToProps = state => ({
+  authState: state.authState,
+});
+
+export default connect(mapStateToProps)(MainStack);
