@@ -33,6 +33,7 @@ import ShareRecordingPage from '../pages/recording/ShareRecordingPage';
 import DismissableTabNavigator from './DismissableTabNavigation';
 import SignIn from '../pages/authentication/SignIn';
 import { AuthState } from '../types/AuthState';
+import SignUp from '../pages/authentication/SignUp';
 
 const LearnTabNavigator = TabNavigator(
   {
@@ -271,8 +272,15 @@ const createMainStack = authState =>
                 headerTitle: 'Sign In',
               },
             },
+            SignUp: {
+              screen: SignUp,
+              navigationOptions: {
+                headerTitle: 'Sign Up',
+              },
+            },
           },
           {
+            initialRouteName: mapAuthStateToAuthRouteName(authState),
             navigationOptions: {
               headerStyle: {
                 backgroundColor: '#00BCD4',
@@ -374,3 +382,15 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(MainStack);
+
+const mapAuthStateToAuthRouteName = (authState: AuthState) => {
+  console.log('mapping', authState);
+  switch (authState) {
+    case 'signIn':
+      return 'SignIn';
+    case 'signUp':
+      return 'SignUp';
+    default:
+      return 'SignIn';
+  }
+};
