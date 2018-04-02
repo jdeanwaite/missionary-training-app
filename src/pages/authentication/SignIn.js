@@ -1,43 +1,28 @@
 import React from 'react';
-import { Auth, I18n, Logger } from 'aws-amplify';
+import { Auth, Logger } from 'aws-amplify';
 import { StyleSheet } from 'react-native';
-import { AmplifyMessageMapEntries } from 'aws-amplify-react-native';
 import { Container, Content, Item, Input, Button, View, Text } from 'native-base';
 import { connect } from 'react-redux';
 import { updateAuthState } from '../../app/reducer';
-import { AuthState } from '../../types/AuthState';
+import AuthPage from './AuthPage';
 
 const logger = new Logger('SignIn');
 
-type Props = {
-  updateAuthState: (authState: string) => void,
-};
-
-type State = {
-  username: string,
-  password: string,
-  error: string,
-};
-
-class SignIn extends React.Component<Props, State> {
+class SignIn extends AuthPage {
   state = {
     username: null,
     password: null,
     error: null,
   };
 
-  handleStateChange = (state: AuthState) => {
-    this.props.updateAuthState(state);
-  };
-
   checkContact = (user) => {
     Auth.verifiedContact(user).then((data) => {
       logger.debug('verified user attributes', data);
       if (data.verified) {
-        this.changeState('signedIn', user);
+        this.onAuthStateChange('signedIn', user);
       } else {
         const userWithData = Object.assign({}, user, data);
-        this.changeState('verifyContact', userWithData);
+        this.onAuthStateChange('verifyContact', userWithData);
       }
     });
   };
@@ -49,32 +34,15 @@ class SignIn extends React.Component<Props, State> {
       .then((user) => {
         logger.debug(user);
         if (user.challengeName === 'SMS_MFA') {
-          this.changeState('confirmSignIn', user);
+          this.onAuthStateChange('confirmSignIn', user);
         } else if (user.challengeName === 'NEW_PASSWORD_REQUIRED') {
           logger.debug('require new password', user.challengeParam);
-          this.changeState('requireNewPassword', user);
+          this.onAuthStateChange('requireNewPassword', user);
         } else {
           this.checkContact(user);
         }
       })
       .catch(err => this.error(err));
-  };
-
-  error = (err) => {
-    logger.debug(err);
-
-    let msg = '';
-    if (typeof err === 'string') {
-      msg = err;
-    } else if (err.message) {
-      msg = err.message;
-    } else {
-      msg = JSON.stringify(err);
-    }
-
-    const map = MessageMap;
-    msg = typeof map === 'string' ? map : map(msg);
-    this.setState({ error: msg });
   };
 
   render() {
@@ -116,10 +84,10 @@ class SignIn extends React.Component<Props, State> {
           </View>
           {this.state.error && <Text style={styles.error}>{this.state.error}</Text>}
           <View style={styles.footer}>
-            <Button transparent primary onPress={() => this.handleStateChange('signUp')}>
+            <Button transparent primary onPress={() => this.onAuthStateChange('signUp')}>
               <Text>Create Account</Text>
             </Button>
-            <Button transparent primary>
+            <Button transparent primary onPress={() => this.onAuthStateChange('forgotPassword')}>
               <Text>Forgot Password?</Text>
             </Button>
           </View>
@@ -149,15 +117,3 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
-
-const MessageMap = (message) => {
-  const match = AmplifyMessageMapEntries.filter(entry => entry[1].test(message));
-  if (match.length === 0) {
-    return message;
-  }
-
-  const entry = match[0];
-  const msg = entry.length > 2 ? entry[2] : entry[0];
-
-  return I18n.get(entry[0], msg);
-};

@@ -1,58 +1,69 @@
-/*
- * Copyright 2017-2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with
- * the License. A copy of the License is located at
- *
- *     http://aws.amazon.com/apache2.0/
- *
- * or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
- * and limitations under the License.
- */
-
 import React from 'react';
-import { View, Text, Item, Input, Button, Content } from 'native-base';
+import { View, Text, Item, Input, Button, Content, Picker } from 'native-base';
 import { Auth, I18n, Logger } from 'aws-amplify';
+import { Platform } from 'react-native';
+import { connect } from 'react-redux';
 import { AuthState } from '../../types/AuthState';
+import { updateAuthState } from '../../app/reducer';
+import AuthPage from './AuthPage';
 
 const logger = new Logger('SignUp');
 
-const Footer = (props: { onStateChange: (authState: AuthState) => void }) => {
-  const { onStateChange } = props;
+const Footer = (props: { onAuthStateChange: (authState: AuthState) => void }) => {
+  const { onAuthStateChange } = props;
   return (
     <View style={styles.footer}>
-      <Button transparent primary onPress={() => onStateChange('confirmSignUp')}>
+      <Button transparent primary onPress={() => onAuthStateChange('confirmSignUp')}>
         <Text>{I18n.get('Confirm a Code')}</Text>
       </Button>
-      <Button transparent primary onPress={() => onStateChange('signIn')}>
+      <Button transparent primary onPress={() => onAuthStateChange('signIn')}>
         <Text>{I18n.get('Sign In')}</Text>
       </Button>
     </View>
   );
 };
 
-export default class SignUp extends React.Component<{}> {
+class SignUp extends AuthPage {
   state = {
     email: null,
     password: null,
     given_name: null,
     family_name: null,
     gender: null,
+    error: null,
   };
 
-  signUp() {
+  signUp = () => {
     const {
-      email, password, given_name, family_name, gender,
+      email,
+      password,
+      given_name, // eslint-disable-line camelcase
+      family_name, // eslint-disable-line camelcase
+      gender,
     } = this.state;
+
     logger.debug(`Sign Up for ${email}`);
-    Auth.signUp(email, password, given_name, family_name, gender)
+    logger.debug(this.state);
+    Auth.signUp({
+      username: email,
+      password,
+      attributes: {
+        email,
+        given_name,
+        family_name,
+        gender,
+      },
+    })
       .then((data) => {
         logger.debug(data);
-        this.changeState('confirmSignUp', email);
+        this.onAuthStateChange('confirmSignUp', email);
       })
       .catch(err => this.error(err));
-  }
+  };
+
+  updateGender = (gender) => {
+    this.setState({ gender });
+  };
 
   render() {
     const disabled =
@@ -90,7 +101,7 @@ export default class SignUp extends React.Component<{}> {
             autoCapitalize="words"
             autoCorrect={false}
             value={this.state.first_name}
-            onChangeText={text => this.setState({ first_name: text })}
+            onChangeText={text => this.setState({ given_name: text })}
           />
         </Item>
         <Item>
@@ -99,49 +110,32 @@ export default class SignUp extends React.Component<{}> {
             autoCapitalize="words"
             autoCorrect={false}
             value={this.state.last_name}
-            onChangeText={text => this.setState({ last_name: text })}
+            onChangeText={text => this.setState({ family_name: text })}
           />
         </Item>
+        <Item>
+          <Picker
+            mode="dropdown"
+            placeholder="Gender"
+            selectedValue={this.state.gender}
+            onValueChange={this.updateGender}
+            placeholderStyle={Platform.OS === 'ios' ? { paddingLeft: 5 } : {}}
+            textStyle={Platform.OS === 'ios' ? { paddingLeft: 5 } : {}}
+            headerTitleStyle={{ color: '#fff' }}
+          >
+            <Picker.Item label="Male" value="male" />
+            <Picker.Item label="Female" value="female" />
+          </Picker>
+        </Item>
         <View>
-          <Button block primary disabled={disabled} style={styles.signUp}>
+          <Button block primary disabled={disabled} style={styles.signUp} onPress={this.signUp}>
             <Text>Sign Up</Text>
           </Button>
         </View>
-        <Footer />
+        {this.state.error && <Text style={styles.error}>{this.state.error}</Text>}
+        <Footer onAuthStateChange={this.onAuthStateChange} />
       </Content>
     );
-    // return React.createElement(
-    //   View,
-    //   { style: theme.section },
-    //   React.createElement(Header, { theme }, I18n.get('Sign Up')),
-    //   React.createElement(
-    //     View,
-    //     { style: theme.sectionBody },
-    //     React.createElement(Username, {
-    //       theme,
-    //       onChangeText: text => this.setState({ username: text }),
-    //     }),
-    //     React.createElement(Password, {
-    //       theme,
-    //       onChangeText: text => this.setState({ password: text }),
-    //     }),
-    //     React.createElement(Email, {
-    //       theme,
-    //       onChangeText: text => this.setState({ email: text }),
-    //     }),
-    //     React.createElement(PhoneNumber, {
-    //       theme,
-    //       onChangeText: text => this.setState({ phone_number: text }),
-    //     }),
-    //     React.createElement(Button, {
-    //       title: I18n.get('Sign Up'),
-    //       onPress: this.signUp,
-    //       disabled: !this.state.username || !this.state.password,
-    //     }),
-    //   ),
-    //   React.createElement(Footer, { theme, onStateChange: this.changeState }),
-    //   React.createElement(ErrorRow, { theme }, this.state.error),
-    // );
   }
 }
 
@@ -154,4 +148,17 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+  error: {
+    color: 'red',
+    marginTop: 16,
+    textAlign: 'center',
+  },
 };
+
+const mapStateToProps = () => ({});
+
+const mapDispatchToProps = dispatch => ({
+  updateAuthState: (authState, authData = null) => dispatch(updateAuthState(authState, authData)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

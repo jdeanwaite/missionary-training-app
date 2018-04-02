@@ -34,6 +34,10 @@ import DismissableTabNavigator from './DismissableTabNavigation';
 import SignIn from '../pages/authentication/SignIn';
 import { AuthState } from '../types/AuthState';
 import SignUp from '../pages/authentication/SignUp';
+import ConfirmSignUp from '../pages/authentication/ConfirmSignUp';
+import ForgotPassword from '../pages/authentication/ForgotPassword';
+import RequireNewPassword from '../pages/authentication/RequireNewPassword';
+import Loading from '../pages/authentication/Loading';
 
 const LearnTabNavigator = TabNavigator(
   {
@@ -278,6 +282,30 @@ const createMainStack = authState =>
                 headerTitle: 'Sign Up',
               },
             },
+            ConfirmSignUp: {
+              screen: ConfirmSignUp,
+              navigationOptions: {
+                headerTitle: 'Confirm Sign Up',
+              },
+            },
+            ForgotPassword: {
+              screen: ForgotPassword,
+              navigationOptions: {
+                headerTitle: 'Forgot Password',
+              },
+            },
+            RequireNewPassword: {
+              screen: RequireNewPassword,
+              navigationOptions: {
+                headerTitle: 'New Password Required',
+              },
+            },
+            Loading: {
+              screen: Loading,
+              navigationOptions: {
+                header: null,
+              },
+            },
           },
           {
             initialRouteName: mapAuthStateToAuthRouteName(authState),
@@ -390,6 +418,14 @@ const mapAuthStateToAuthRouteName = (authState: AuthState) => {
       return 'SignIn';
     case 'signUp':
       return 'SignUp';
+    case 'confirmSignUp':
+      return 'ConfirmSignUp';
+    case 'forgotPassword':
+      return 'ForgotPassword';
+    case 'requireNewPassword':
+      return 'RequireNewPassword';
+    case 'loading':
+      return 'Loading';
     default:
       return 'SignIn';
   }

@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>4</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>gospellibrary</string>
@@ -42,7 +42,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>The camera will be used for practice teaching videos.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The microphone will be used for practice teaching videos.</string>
 	<key>UIAppFonts</key>

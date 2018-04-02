@@ -20,7 +20,7 @@ Amplify.Logger.LOG_LEVEL = 'DEBUG';
 Amplify.configure({
   Auth: {
     // // REQUIRED - Amazon Cognito Identity Pool ID
-    // identityPoolId: 'XX-XXXX-X:XXXXXXXX-XXXX-1234-abcd-1234567890ab',
+    identityPoolId: 'us-west-2:8e28042b-13a3-4aac-b994-e24fe68819af',
     // REQUIRED - Amazon Cognito Region
     region: 'us-west-2',
     // OPTIONAL - Amazon Cognito User Pool ID
