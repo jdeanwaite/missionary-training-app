@@ -32,6 +32,8 @@ export default class NewRecordingPage extends Component<Props> {
   // };
 
   render() {
+    console.log('nav', this.props.navigation);
+    console.log('sp', this.props.screenProps);
     const { teach } = this.props.navigation.state.params.principle;
 
     return (

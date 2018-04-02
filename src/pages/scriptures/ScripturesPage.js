@@ -18,7 +18,7 @@ export default function ScripturesPage(props: Props) {
   return (
     <Content padder>
       {scriptureGroups.map(scriptureGroup => (
-        <ScriptureGroupComponent key={scriptureGroup.id} scriptureGroup={scriptureGroup} />
+        <ScriptureGroupComponent key={scriptureGroup.title} scriptureGroup={scriptureGroup} />
       ))}
     </Content>
   );

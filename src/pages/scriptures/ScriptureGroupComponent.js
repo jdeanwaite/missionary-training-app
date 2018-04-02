@@ -15,7 +15,7 @@ export default function ScriptureGroupComponent(props: Props) {
       <Text style={styles.title}>{props.scriptureGroup.title}</Text>
 
       {scriptures.map(scripture => (
-        <TouchableOpacity key={scripture.id} onPress={() => handleLink(scripture)}>
+        <TouchableOpacity key={scripture.displayText} onPress={() => handleLink(scripture)}>
           <Text style={styles.link}>{scripture.displayText}</Text>
         </TouchableOpacity>
       ))}

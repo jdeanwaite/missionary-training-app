@@ -4,17 +4,19 @@ import React, { Component } from 'react';
 import { StyleSheet, Button, TouchableOpacity } from 'react-native';
 import { Auth, Logger } from 'aws-amplify';
 import { Container, Content } from 'native-base';
+import { graphql, compose } from 'react-apollo';
 import { connect } from 'react-redux';
 import LessonNavigationGroup from './LessonList';
 import type { Lesson } from '../../types/Lesson';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { updateAuthState } from '../../app/reducer';
+import AllLessonsQuery from '../../queries/AllLessonsQuery';
 
 const principle1 = require('../../../scratches/principle.json');
 
 const logger = new Logger('HomePage');
 
-class HomePage extends Component<{ navigation: any, updateAuthState: any }> {
+class HomePage extends Component<{ navigation: any, updateAuthState: any, lessons: Lesson[] }> {
   static navigationOptions = ({ navigation }) => {
     const { params = {} } = navigation.state;
     return {
@@ -37,12 +39,8 @@ class HomePage extends Component<{ navigation: any, updateAuthState: any }> {
   };
 
   render() {
-    const lessons: Lesson[] = [
-      {
-        name: 'The Restoration',
-        principles: [principle1],
-      },
-    ];
+    console.log('home props', this.props);
+    const { lessons } = this.props;
     return (
       <Container>
         <Content contentContainerStyle={styles.container}>
@@ -65,4 +63,15 @@ const mapDispatchToProps = dispatch => ({
   updateAuthState: (authState, authData = null) => dispatch(updateAuthState(authState, authData)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
+const HomePageWithState = connect(mapStateToProps, mapDispatchToProps)(HomePage);
+
+const HomePageWithData = compose(graphql(AllLessonsQuery, {
+  options: {
+    fetchPolicy: 'cache-and-network',
+  },
+  props: props => ({
+    lessons: props.data.allLessons,
+  }),
+}))(HomePageWithState);
+
+export default HomePageWithData;

@@ -1,0 +1,67 @@
+type Lesson {
+  id: ID
+  name: String
+  principles: [Principle]
+}
+
+type Principle {
+  id: ID
+  name: String
+  doctrine: RenderableText
+  teach: Teach
+  videos: EmbeddableVideo
+  scripturesGroups: [ScriptureGroup]
+  quiz: Quiz
+}
+
+type Quiz {
+  questions: [QuizQuestion]
+}
+
+union QuizQuestion = MultipleChoiceQuestion | FreeResponseQuestion
+
+type MultipleChoiceQuestion {
+  type: String
+  question: String
+  options: [MultipleChoiceOption]
+  correctAnswerId: ID
+}
+
+type MultipleChoiceOption {
+  id: ID
+  text: String
+}
+
+type FreeResponseQuestion {
+  type: String
+  question: String
+}
+
+type RenderableText {
+  markdown: String
+}
+
+type Teach {
+  instruction: RenderableText
+  pointsToTeach: RenderableText
+}
+
+type EmbeddableVideo {
+  id: ID
+  title: String
+  embedHtml: String
+  poster: String
+}
+
+type ScriptureGroup {
+  title: String
+  scriptures: [Scripture]
+}
+
+type Scripture {
+  displayText: String
+  book: String
+  subBook: String
+  chapter: String
+  verse: String
+}

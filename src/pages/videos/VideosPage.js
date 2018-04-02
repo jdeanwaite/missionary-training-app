@@ -15,7 +15,7 @@ type Props = {
 };
 const VideosPage = (props: Props) => {
   const { videos } = props.navigation.state.params.principle;
-  const videoTiles = videos.map(video => <VideoModal key={video.id} video={video} />);
+  const videoTiles = videos.map(video => <VideoModal key={video.title} video={video} />);
 
   return <Content padder>{videoTiles}</Content>;
 };

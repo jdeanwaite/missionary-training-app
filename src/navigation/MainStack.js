@@ -324,7 +324,7 @@ const createMainStack = authState =>
             Home: {
               screen: HomePage,
               navigationOptions: {
-                headerTitle: 'Missionary Training App',
+                headerTitle: 'Teach My Gospel',
               },
             },
             Principle: {
@@ -340,10 +340,43 @@ const createMainStack = authState =>
               //   ),
               // }),
             },
+            quizQuestionFlow: {
+              screen: QuizQuestionStackNavigator,
+              navigationOptions: {
+                header: null,
+                headerMode: 'none',
+              },
+            },
+            newNoteFlow: {
+              screen: new DismissableStackNavigator({
+                NewNote: {
+                  screen: NewNotePage,
+                  navigationOptions: {
+                    headerTitle: 'New Note',
+                    headerStyle: {
+                      backgroundColor: '#00BCD4',
+                    },
+                    headerTintColor: '#ffffff',
+                  },
+                },
+              }),
+            },
+            newRecordingFlow: {
+              screen: NewRecordingStackNavigator,
+              navigationOptions: {
+                header: null,
+              },
+            },
+            reviewRecordingFlow: {
+              screen: ReviewRecordingStackNavigator,
+              navigationOptions: {
+                header: null,
+              },
+            },
           },
           {
             initialRouteName: 'Home',
-            mode: 'card',
+            mode: 'modal',
             navigationOptions: {
               headerStyle: {
                 backgroundColor: '#00BCD4',
@@ -352,39 +385,6 @@ const createMainStack = authState =>
             },
           },
         ),
-      },
-      quizQuestionFlow: {
-        screen: QuizQuestionStackNavigator,
-        navigationOptions: {
-          header: null,
-          headerMode: 'none',
-        },
-      },
-      newNoteFlow: {
-        screen: new DismissableStackNavigator({
-          NewNote: {
-            screen: NewNotePage,
-            navigationOptions: {
-              headerTitle: 'New Note',
-              headerStyle: {
-                backgroundColor: '#00BCD4',
-              },
-              headerTintColor: '#ffffff',
-            },
-          },
-        }),
-      },
-      newRecordingFlow: {
-        screen: NewRecordingStackNavigator,
-        navigationOptions: {
-          header: null,
-        },
-      },
-      reviewRecordingFlow: {
-        screen: ReviewRecordingStackNavigator,
-        navigationOptions: {
-          header: null,
-        },
       },
     },
     {

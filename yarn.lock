@@ -813,7 +813,7 @@ aws-amplify@0.2.14, aws-amplify@^0.2.x:
     uuid "^3.2.1"
     zen-observable "^0.8.6"
 
-aws-appsync-react@^1.0.2:
+aws-appsync-react@1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/aws-appsync-react/-/aws-appsync-react-1.0.6.tgz#6b90ceb7eeefd54deb9995137934104ef60ee191"
   dependencies:
@@ -852,8 +852,8 @@ aws-sdk@2.198.0:
     xmlbuilder "4.2.1"
 
 aws-sdk@^2.139.0, aws-sdk@^2.173.0:
-  version "2.216.1"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.216.1.tgz#9dbf964206d722240507cc60d46e8d3bae9c34f0"
+  version "2.218.1"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.218.1.tgz#b4cf742cc0853bd7c868b388cbf0b4a1ef1abc12"
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -6681,8 +6681,8 @@ whatwg-encoding@^1.0.1, whatwg-encoding@^1.0.3:
     iconv-lite "0.4.19"
 
 whatwg-fetch@>=0.10.0:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz#dde6a5df315f9d39991aa17621853d720b85566f"
 
 whatwg-fetch@^1.0.0:
   version "1.1.1"
