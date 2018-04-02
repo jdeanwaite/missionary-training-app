@@ -30,7 +30,6 @@ class SignIn extends AuthPage {
   signIn = () => {
     const { username, password } = this.state;
     logger.debug(`Sign In for ${username}`);
-    this.onAuthStateChange('loading');
     Auth.signIn(username, password)
       .then((user) => {
         logger.debug(user);

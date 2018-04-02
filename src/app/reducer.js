@@ -1,6 +1,6 @@
 export const UPDATE_AUTH_STATE = '[Auth] UPDATE_AUTH_STATE';
 
-export default function reducer(state = { authState: 'signIn' }, action) {
+export default function reducer(state = { authState: 'loading' }, action) {
   switch (action.type) {
     case UPDATE_AUTH_STATE: {
       const { authState, authData } = action.payload;

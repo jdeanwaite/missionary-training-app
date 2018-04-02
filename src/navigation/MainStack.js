@@ -427,6 +427,6 @@ const mapAuthStateToAuthRouteName = (authState: AuthState) => {
     case 'loading':
       return 'Loading';
     default:
-      return 'SignIn';
+      return 'Loading';
   }
 };
