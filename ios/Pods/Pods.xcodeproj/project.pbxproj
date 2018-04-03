@@ -7,33 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160B3172580C0C81476E399B27B16695 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		18F5C8DCE10080925D57D36101FF0A3A /* Pods-MissionaryTrainingApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7CC7B64D9BB48AC615ABC898DF4F135 /* Pods-MissionaryTrainingApp-dummy.m */; };
+		14B2D57E810E23B6FB29D8B4DA5A2E96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		EF1298CC801351F17AB6D915AE6BCCC6 /* Pods-TeachMyGospel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 213336A7ED65A9C3CEC8B9797D842B41 /* Pods-TeachMyGospel-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19DB142C7268DF86E843B28262E75ED1 /* Pods-MissionaryTrainingApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MissionaryTrainingApp-resources.sh"; sourceTree = "<group>"; };
+		062C83FA57523F8683932691327C2E05 /* libPods-TeachMyGospel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-TeachMyGospel.a"; path = "libPods-TeachMyGospel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FF8CBE3D70C3B5EE02BF7F1402952A2 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
+		213336A7ED65A9C3CEC8B9797D842B41 /* Pods-TeachMyGospel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TeachMyGospel-dummy.m"; sourceTree = "<group>"; };
 		2E280B58529AEBA76B5F11C0705D0856 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterReactNativeShared.framework; path = AppCenterReactNativeShared/AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
+		4203C2EF8180CC1B2F996D6003BAE789 /* Pods-TeachMyGospel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeachMyGospel.release.xcconfig"; sourceTree = "<group>"; };
+		57CF4BFD896A9DEB2BE1B7EDCC701484 /* Pods-TeachMyGospel-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeachMyGospel-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68560D6B8C6258D04ACFD8E17A8711B5 /* Pods-MissionaryTrainingApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MissionaryTrainingApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		697057EB6F6A315777E7EA941A2AAF3B /* AppCenterAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterAnalytics.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterAnalytics.framework"; sourceTree = "<group>"; };
-		89B4EDAD67745916E057A27ADA7DDB6D /* Pods-MissionaryTrainingApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MissionaryTrainingApp-frameworks.sh"; sourceTree = "<group>"; };
+		90A2298BFA04C7C6DF6F238DC08A8565 /* Pods-TeachMyGospel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TeachMyGospel.debug.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3511526EDBBD8D1F7A32728EFB33149 /* libPods-MissionaryTrainingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MissionaryTrainingApp.a"; path = "libPods-MissionaryTrainingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A56755FF00A2E0771506523DFB8BDE12 /* Pods-MissionaryTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MissionaryTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B7A44E43ED60C1914A9BBC3901461146 /* Pods-MissionaryTrainingApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MissionaryTrainingApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		B7CC7B64D9BB48AC615ABC898DF4F135 /* Pods-MissionaryTrainingApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MissionaryTrainingApp-dummy.m"; sourceTree = "<group>"; };
+		9C2E4FD4DFC64A33F5865568D356C8C5 /* Pods-TeachMyGospel-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TeachMyGospel-acknowledgements.plist"; sourceTree = "<group>"; };
+		A32038D888DE0FDC7E17B5BEDA155AAF /* Pods-TeachMyGospel-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TeachMyGospel-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DB9C9D4640947789EA501351D8059FEB /* Pods-TeachMyGospel-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TeachMyGospel-frameworks.sh"; sourceTree = "<group>"; };
 		DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
-		FB17ED58B26A45E79D6F2B7EBC6948F8 /* Pods-MissionaryTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MissionaryTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5CAC5030230F9C2C80D91E36EEBFA73 /* Frameworks */ = {
+		BFA70110A69A4D08D0B327779D81A831 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				160B3172580C0C81476E399B27B16695 /* Foundation.framework in Frameworks */,
+				14B2D57E810E23B6FB29D8B4DA5A2E96 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +46,21 @@
 				DC65AFFB7964130E42157D207BE3A6DE /* AppCenter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CE6D8B1FC6B1A66E255A5B82257EBBE /* Pods-TeachMyGospel */ = {
+			isa = PBXGroup;
+			children = (
+				A32038D888DE0FDC7E17B5BEDA155AAF /* Pods-TeachMyGospel-acknowledgements.markdown */,
+				9C2E4FD4DFC64A33F5865568D356C8C5 /* Pods-TeachMyGospel-acknowledgements.plist */,
+				213336A7ED65A9C3CEC8B9797D842B41 /* Pods-TeachMyGospel-dummy.m */,
+				DB9C9D4640947789EA501351D8059FEB /* Pods-TeachMyGospel-frameworks.sh */,
+				57CF4BFD896A9DEB2BE1B7EDCC701484 /* Pods-TeachMyGospel-resources.sh */,
+				90A2298BFA04C7C6DF6F238DC08A8565 /* Pods-TeachMyGospel.debug.xcconfig */,
+				4203C2EF8180CC1B2F996D6003BAE789 /* Pods-TeachMyGospel.release.xcconfig */,
+			);
+			name = "Pods-TeachMyGospel";
+			path = "Target Support Files/Pods-TeachMyGospel";
 			sourceTree = "<group>";
 		};
 		2299AF501E253B95F2AE1FAD00A3B182 /* Crashes */ = {
@@ -72,14 +87,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		435E8141EB209E73B42FDA311C22144E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C5BCEAA75CBE56BF9194FCA03CDEF6FF /* Pods-MissionaryTrainingApp */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
 		4789B2888C9F3A64D9BB98A64504484B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,9 +101,17 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				B1C0FD4C526B54B6F7B5EA76C32A7B4C /* Pods */,
-				9B8CEB3C768B78E70C7B5315BC4941C6 /* Products */,
-				435E8141EB209E73B42FDA311C22144E /* Targets Support Files */,
+				8A82A5DC0C9E42B7CD696AD44A8491BF /* Products */,
+				A8124BC0FE4DFDDCF1AF44F7C5BB1FD8 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		8A82A5DC0C9E42B7CD696AD44A8491BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				062C83FA57523F8683932691327C2E05 /* libPods-TeachMyGospel.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		8E2C96EA6162ABA11EBE8E8817909062 /* Frameworks */ = {
@@ -107,12 +122,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9B8CEB3C768B78E70C7B5315BC4941C6 /* Products */ = {
+		A8124BC0FE4DFDDCF1AF44F7C5BB1FD8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A3511526EDBBD8D1F7A32728EFB33149 /* libPods-MissionaryTrainingApp.a */,
+				1CE6D8B1FC6B1A66E255A5B82257EBBE /* Pods-TeachMyGospel */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		B1C0FD4C526B54B6F7B5EA76C32A7B4C /* Pods */ = {
@@ -130,21 +145,6 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C5BCEAA75CBE56BF9194FCA03CDEF6FF /* Pods-MissionaryTrainingApp */ = {
-			isa = PBXGroup;
-			children = (
-				68560D6B8C6258D04ACFD8E17A8711B5 /* Pods-MissionaryTrainingApp-acknowledgements.markdown */,
-				B7A44E43ED60C1914A9BBC3901461146 /* Pods-MissionaryTrainingApp-acknowledgements.plist */,
-				B7CC7B64D9BB48AC615ABC898DF4F135 /* Pods-MissionaryTrainingApp-dummy.m */,
-				89B4EDAD67745916E057A27ADA7DDB6D /* Pods-MissionaryTrainingApp-frameworks.sh */,
-				19DB142C7268DF86E843B28262E75ED1 /* Pods-MissionaryTrainingApp-resources.sh */,
-				A56755FF00A2E0771506523DFB8BDE12 /* Pods-MissionaryTrainingApp.debug.xcconfig */,
-				FB17ED58B26A45E79D6F2B7EBC6948F8 /* Pods-MissionaryTrainingApp.release.xcconfig */,
-			);
-			name = "Pods-MissionaryTrainingApp";
-			path = "Target Support Files/Pods-MissionaryTrainingApp";
 			sourceTree = "<group>";
 		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
@@ -186,20 +186,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C36DA127221D73088BB38936B30C8924 /* Pods-MissionaryTrainingApp */ = {
+		71B96E50CBC5BE36D87A94F646ABC235 /* Pods-TeachMyGospel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0B4D6E21C2334FC729B7C96041C67BF /* Build configuration list for PBXNativeTarget "Pods-MissionaryTrainingApp" */;
+			buildConfigurationList = 14DDF6549969C81D98B346F26BB0D4EE /* Build configuration list for PBXNativeTarget "Pods-TeachMyGospel" */;
 			buildPhases = (
-				B04B86F011715A98CB9A19422195B487 /* Sources */,
-				A5CAC5030230F9C2C80D91E36EEBFA73 /* Frameworks */,
+				1257FA0B3336E1DEC2439F2EB18CEA86 /* Sources */,
+				BFA70110A69A4D08D0B327779D81A831 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-MissionaryTrainingApp";
-			productName = "Pods-MissionaryTrainingApp";
-			productReference = A3511526EDBBD8D1F7A32728EFB33149 /* libPods-MissionaryTrainingApp.a */;
+			name = "Pods-TeachMyGospel";
+			productName = "Pods-TeachMyGospel";
+			productReference = 062C83FA57523F8683932691327C2E05 /* libPods-TeachMyGospel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -219,51 +219,30 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9B8CEB3C768B78E70C7B5315BC4941C6 /* Products */;
+			productRefGroup = 8A82A5DC0C9E42B7CD696AD44A8491BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C36DA127221D73088BB38936B30C8924 /* Pods-MissionaryTrainingApp */,
+				71B96E50CBC5BE36D87A94F646ABC235 /* Pods-TeachMyGospel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B04B86F011715A98CB9A19422195B487 /* Sources */ = {
+		1257FA0B3336E1DEC2439F2EB18CEA86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F5C8DCE10080925D57D36101FF0A3A /* Pods-MissionaryTrainingApp-dummy.m in Sources */,
+				EF1298CC801351F17AB6D915AE6BCCC6 /* Pods-TeachMyGospel-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		4D4F860DD20D5473789F1078275C4D40 /* Release */ = {
+		2E2F2F7B1F5BBC3D7050AD6606AD66EF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB17ED58B26A45E79D6F2B7EBC6948F8 /* Pods-MissionaryTrainingApp.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		6B4D3B57691E8C29AB47BB6C616C11F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A56755FF00A2E0771506523DFB8BDE12 /* Pods-MissionaryTrainingApp.debug.xcconfig */;
+			baseConfigurationReference = 90A2298BFA04C7C6DF6F238DC08A8565 /* Pods-TeachMyGospel.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -396,23 +375,44 @@
 			};
 			name = Debug;
 		};
+		E73E6BB1FF689E55DB4B5234156BDA62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4203C2EF8180CC1B2F996D6003BAE789 /* Pods-TeachMyGospel.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		14DDF6549969C81D98B346F26BB0D4EE /* Build configuration list for PBXNativeTarget "Pods-TeachMyGospel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2F2F7B1F5BBC3D7050AD6606AD66EF /* Debug */,
+				E73E6BB1FF689E55DB4B5234156BDA62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
 				6F9224530522DD3C735EC96CF142642E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F0B4D6E21C2334FC729B7C96041C67BF /* Build configuration list for PBXNativeTarget "Pods-MissionaryTrainingApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6B4D3B57691E8C29AB47BB6C616C11F1 /* Debug */,
-				4D4F860DD20D5473789F1078275C4D40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

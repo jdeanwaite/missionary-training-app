@@ -12,7 +12,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* MissionaryTrainingAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MissionaryTrainingAppTests.m */; };
+		00E356F31AD99517003FC87E /* TeachMyGospelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TeachMyGospelTests.m */; };
 		068E38C6B9064C6E831412ED /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADE29E5EA0FB4A8B9014B196 /* Octicons.ttf */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -25,7 +25,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		243BF247CB4C4485B9783585 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B1894E0F91C46D3BA27DFDB /* Foundation.ttf */; };
 		2E999045C1404435A8A5314C /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA79FE3FEF9945A5AC9811BA /* Ionicons.ttf */; };
-		2EDD5D739220BFAD283C9A78 /* libPods-MissionaryTrainingApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70541553D7AB0875D560592 /* libPods-MissionaryTrainingApp.a */; };
+		2EDD5D739220BFAD283C9A78 /* libPods-TeachMyGospel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B70541553D7AB0875D560592 /* libPods-TeachMyGospel.a */; };
 		4549F79F63F2462C8EECDA00 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8801E6D1FFC41EF9AC9EBC3 /* Feather.ttf */; };
 		4BCF340123B746CEB6623763 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C08B686BC2654341ADF99A7F /* MaterialIcons.ttf */; };
 		4C90036C2E404174BBC1657F /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADEC48AA5D9E414788A4295E /* libRNCamera.a */; };
@@ -45,7 +45,7 @@
 		CBA5E667BEB0448DB4076884 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A990ACAFA142A1B0B48E9C /* AppCenter-Config.plist */; };
 		CBB3E38F3BFC4984AFF8CD40 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61664F2A5F694730B648732B /* libRNFS.a */; };
 		D0455984206984AB009ADB4D /* libART.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D04559812069845E009ADB4D /* libART.a */; };
-		D0C08DAB20704BF000323FF9 /* libRNAWSCognito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C08DA620704BDE00323FF9 /* libRNAWSCognito.a */; };
+		D04B3D9B20733A2D00EF5D52 /* libRNAWSCognito.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D04B3D9620733A1700EF5D52 /* libRNAWSCognito.a */; };
 		DE2A8B62DD354A03A1920666 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71A226879920458EAB27122F /* Roboto.ttf */; };
 		EB68465EDAD747538D7BD06B /* libAppCenterReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 041B498E3BF3492B912F18A3 /* libAppCenterReactNative.a */; };
 		EDE6F13C5F354390AF360AC0 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8EC5615360E45709B92D635 /* libRNVectorIcons.a */; };
@@ -93,7 +93,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = MissionaryTrainingApp;
+			remoteInfo = TeachMyGospel;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -396,9 +396,9 @@
 			remoteGlobalIDString = 323A12871E5F266B004975B8;
 			remoteInfo = "ART-tvOS";
 		};
-		D0C08DA520704BDE00323FF9 /* PBXContainerItemProxy */ = {
+		D04B3D9520733A1700EF5D52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D0C08D7520704BDD00323FF9 /* RNAWSCognito.xcodeproj */;
+			containerPortal = D04B3D6520733A1700EF5D52 /* RNAWSCognito.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNAWSCognito;
@@ -412,24 +412,24 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* MissionaryTrainingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MissionaryTrainingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* TeachMyGospelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeachMyGospelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MissionaryTrainingAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MissionaryTrainingAppTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* TeachMyGospelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeachMyGospelTests.m; sourceTree = "<group>"; };
 		041B498E3BF3492B912F18A3 /* libAppCenterReactNative.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libAppCenterReactNative.a; sourceTree = "<group>"; };
 		07A94E174DAA42F8A8E2D038 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		09A5FAFA5663437D9577CAE7 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MissionaryTrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MissionaryTrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MissionaryTrainingApp/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MissionaryTrainingApp/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* TeachMyGospel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeachMyGospel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = TeachMyGospel/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = TeachMyGospel/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MissionaryTrainingApp/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MissionaryTrainingApp/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MissionaryTrainingApp/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = TeachMyGospel/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = TeachMyGospel/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = TeachMyGospel/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		22604D8C34764EB3BC1D844E /* RCTVideo.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTVideo.xcodeproj; path = "../node_modules/react-native-video/ios/RCTVideo.xcodeproj"; sourceTree = "<group>"; };
-		22A990ACAFA142A1B0B48E9C /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "MissionaryTrainingApp/AppCenter-Config.plist"; sourceTree = "<group>"; };
+		22A990ACAFA142A1B0B48E9C /* AppCenter-Config.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "TeachMyGospel/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		398A7ACD4529412FBE246C57 /* AppCenterReactNative.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNative.xcodeproj; path = ../node_modules/appcenter/ios/AppCenterReactNative.xcodeproj; sourceTree = "<group>"; };
 		429AFA6DE94A4325916EB384 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
@@ -444,22 +444,22 @@
 		909DF637D7554463A8872AC5 /* libRCTVideo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTVideo.a; sourceTree = "<group>"; };
 		92BDE08497BA4BBB89F023C4 /* AppCenterReactNativeAnalytics.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeAnalytics.xcodeproj; path = "../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics.xcodeproj"; sourceTree = "<group>"; };
 		9B1894E0F91C46D3BA27DFDB /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
-		9F2F1E99F39DE9C9462F7623 /* Pods-MissionaryTrainingApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MissionaryTrainingApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MissionaryTrainingApp/Pods-MissionaryTrainingApp.release.xcconfig"; sourceTree = "<group>"; };
+		9F2F1E99F39DE9C9462F7623 /* Pods-TeachMyGospel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeachMyGospel.release.xcconfig"; path = "Pods/Target Support Files/Pods-TeachMyGospel/Pods-TeachMyGospel.release.xcconfig"; sourceTree = "<group>"; };
 		A06A1546919940238C076D69 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		AC5EFF788D0D42CD848276C4 /* AppCenterReactNativeCrashes.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AppCenterReactNativeCrashes.xcodeproj; path = "../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		ADE29E5EA0FB4A8B9014B196 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		ADEC48AA5D9E414788A4295E /* libRNCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCamera.a; sourceTree = "<group>"; };
-		B70541553D7AB0875D560592 /* libPods-MissionaryTrainingApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MissionaryTrainingApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B70541553D7AB0875D560592 /* libPods-TeachMyGospel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeachMyGospel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B805458FA8F5451F8F0A9FCE /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		B8EC5615360E45709B92D635 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		C08B686BC2654341ADF99A7F /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		CC7AA62E35F8458083944A6E /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		CCF0B389E1E94A9D8F6C06B4 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
 		D045597B2069845E009ADB4D /* ART.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ART.xcodeproj; path = "../node_modules/react-native/Libraries/ART/ART.xcodeproj"; sourceTree = "<group>"; };
-		D0C08D7520704BDD00323FF9 /* RNAWSCognito.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNAWSCognito.xcodeproj; path = "../node_modules/amazon-cognito-identity-js/ios/RNAWSCognito.xcodeproj"; sourceTree = "<group>"; };
+		D04B3D6520733A1700EF5D52 /* RNAWSCognito.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNAWSCognito.xcodeproj; path = "../node_modules/amazon-cognito-identity-js/ios/RNAWSCognito.xcodeproj"; sourceTree = "<group>"; };
 		D28DE27EEFFA4254AFA118E7 /* RNFS.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
-		E24338D17DBA3931B8851F52 /* Pods-MissionaryTrainingApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MissionaryTrainingApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MissionaryTrainingApp/Pods-MissionaryTrainingApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E24338D17DBA3931B8851F52 /* Pods-TeachMyGospel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeachMyGospel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TeachMyGospel/Pods-TeachMyGospel.debug.xcconfig"; sourceTree = "<group>"; };
 		E2FD85689E304D60B683F276 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		E8801E6D1FFC41EF9AC9EBC3 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		EA79FE3FEF9945A5AC9811BA /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -479,7 +479,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C08DAB20704BF000323FF9 /* libRNAWSCognito.a in Frameworks */,
+				D04B3D9B20733A2D00EF5D52 /* libRNAWSCognito.a in Frameworks */,
 				D0455984206984AB009ADB4D /* libART.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -501,7 +501,7 @@
 				EB68465EDAD747538D7BD06B /* libAppCenterReactNative.a in Frameworks */,
 				58B21BF9990E489684262333 /* libAppCenterReactNativeAnalytics.a in Frameworks */,
 				7BF0DC526ACD414C9F6AA850 /* libAppCenterReactNativeCrashes.a in Frameworks */,
-				2EDD5D739220BFAD283C9A78 /* libPods-MissionaryTrainingApp.a in Frameworks */,
+				2EDD5D739220BFAD283C9A78 /* libPods-TeachMyGospel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,13 +550,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* MissionaryTrainingAppTests */ = {
+		00E356EF1AD99517003FC87E /* TeachMyGospelTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* MissionaryTrainingAppTests.m */,
+				00E356F21AD99517003FC87E /* TeachMyGospelTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = MissionaryTrainingAppTests;
+			path = TeachMyGospelTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -587,7 +587,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* MissionaryTrainingApp */ = {
+		13B07FAE1A68108700A75B9A /* TeachMyGospel */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -598,7 +598,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = MissionaryTrainingApp;
+			name = TeachMyGospel;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -628,7 +628,7 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				B70541553D7AB0875D560592 /* libPods-MissionaryTrainingApp.a */,
+				B70541553D7AB0875D560592 /* libPods-TeachMyGospel.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -654,7 +654,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				D0C08D7520704BDD00323FF9 /* RNAWSCognito.xcodeproj */,
+				D04B3D6520733A1700EF5D52 /* RNAWSCognito.xcodeproj */,
 				D045597B2069845E009ADB4D /* ART.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -691,9 +691,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* MissionaryTrainingApp */,
+				13B07FAE1A68108700A75B9A /* TeachMyGospel */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* MissionaryTrainingAppTests */,
+				00E356EF1AD99517003FC87E /* TeachMyGospelTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D498CF47FB3A4555A7F7D031 /* Resources */,
@@ -709,8 +709,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* MissionaryTrainingApp.app */,
-				00E356EE1AD99517003FC87E /* MissionaryTrainingAppTests.xctest */,
+				13B07F961A680F5B00A75B9A /* TeachMyGospel.app */,
+				00E356EE1AD99517003FC87E /* TeachMyGospelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -805,10 +805,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D0C08D7620704BDD00323FF9 /* Products */ = {
+		D04B3D6620733A1700EF5D52 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0C08DA620704BDE00323FF9 /* libRNAWSCognito.a */,
+				D04B3D9620733A1700EF5D52 /* libRNAWSCognito.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -837,8 +837,8 @@
 		E3BBF5B2AD2EAAF1BF82DE0A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E24338D17DBA3931B8851F52 /* Pods-MissionaryTrainingApp.debug.xcconfig */,
-				9F2F1E99F39DE9C9462F7623 /* Pods-MissionaryTrainingApp.release.xcconfig */,
+				E24338D17DBA3931B8851F52 /* Pods-TeachMyGospel.debug.xcconfig */,
+				9F2F1E99F39DE9C9462F7623 /* Pods-TeachMyGospel.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -846,9 +846,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* MissionaryTrainingAppTests */ = {
+		00E356ED1AD99517003FC87E /* TeachMyGospelTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MissionaryTrainingAppTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TeachMyGospelTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -859,14 +859,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = MissionaryTrainingAppTests;
-			productName = MissionaryTrainingAppTests;
-			productReference = 00E356EE1AD99517003FC87E /* MissionaryTrainingAppTests.xctest */;
+			name = TeachMyGospelTests;
+			productName = TeachMyGospelTests;
+			productReference = 00E356EE1AD99517003FC87E /* TeachMyGospelTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* MissionaryTrainingApp */ = {
+		13B07F861A680F5B00A75B9A /* TeachMyGospel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MissionaryTrainingApp" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TeachMyGospel" */;
 			buildPhases = (
 				8917461A0403AEDE982A0749 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -880,9 +880,9 @@
 			);
 			dependencies = (
 			);
-			name = MissionaryTrainingApp;
+			name = TeachMyGospel;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* MissionaryTrainingApp.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* TeachMyGospel.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -904,7 +904,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MissionaryTrainingApp" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TeachMyGospel" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -985,8 +985,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = D0C08D7620704BDD00323FF9 /* Products */;
-					ProjectRef = D0C08D7520704BDD00323FF9 /* RNAWSCognito.xcodeproj */;
+					ProductGroup = D04B3D6620733A1700EF5D52 /* Products */;
+					ProjectRef = D04B3D6520733A1700EF5D52 /* RNAWSCognito.xcodeproj */;
 				},
 				{
 					ProductGroup = D0455963206982A9009ADB4D /* Products */;
@@ -1003,8 +1003,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* MissionaryTrainingApp */,
-				00E356ED1AD99517003FC87E /* MissionaryTrainingAppTests */,
+				13B07F861A680F5B00A75B9A /* TeachMyGospel */,
+				00E356ED1AD99517003FC87E /* TeachMyGospelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1346,11 +1346,11 @@
 			remoteRef = D04559822069845E009ADB4D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		D0C08DA620704BDE00323FF9 /* libRNAWSCognito.a */ = {
+		D04B3D9620733A1700EF5D52 /* libRNAWSCognito.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libRNAWSCognito.a;
-			remoteRef = D0C08DA520704BDE00323FF9 /* PBXContainerItemProxy */;
+			remoteRef = D04B3D9520733A1700EF5D52 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1416,7 +1416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MissionaryTrainingApp/Pods-MissionaryTrainingApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeachMyGospel/Pods-TeachMyGospel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		85C537F62AC5490F867E04D6 /* [CP] Copy Pods Resources */ = {
@@ -1431,7 +1431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MissionaryTrainingApp/Pods-MissionaryTrainingApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TeachMyGospel/Pods-TeachMyGospel-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8917461A0403AEDE982A0749 /* [CP] Check Pods Manifest.lock */ = {
@@ -1445,7 +1445,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MissionaryTrainingApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TeachMyGospel-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1459,7 +1459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* MissionaryTrainingAppTests.m in Sources */,
+				00E356F31AD99517003FC87E /* TeachMyGospelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1477,7 +1477,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* MissionaryTrainingApp */;
+			target = 13B07F861A680F5B00A75B9A /* TeachMyGospel */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1489,7 +1489,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = MissionaryTrainingApp;
+			path = TeachMyGospel;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1514,7 +1514,7 @@
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 				);
-				INFOPLIST_FILE = MissionaryTrainingAppTests/Info.plist;
+				INFOPLIST_FILE = TeachMyGospelTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1532,7 +1532,7 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MissionaryTrainingApp.app/MissionaryTrainingApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeachMyGospel.app/TeachMyGospel";
 			};
 			name = Debug;
 		};
@@ -1552,7 +1552,7 @@
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 				);
-				INFOPLIST_FILE = MissionaryTrainingAppTests/Info.plist;
+				INFOPLIST_FILE = TeachMyGospelTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1570,13 +1570,13 @@
 					"-lc++",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MissionaryTrainingApp.app/MissionaryTrainingApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeachMyGospel.app/TeachMyGospel";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E24338D17DBA3931B8851F52 /* Pods-MissionaryTrainingApp.debug.xcconfig */;
+			baseConfigurationReference = E24338D17DBA3931B8851F52 /* Pods-TeachMyGospel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1592,22 +1592,22 @@
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 				);
-				INFOPLIST_FILE = MissionaryTrainingApp/Info.plist;
+				INFOPLIST_FILE = TeachMyGospel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.missionarytrainingapp;
-				PRODUCT_NAME = MissionaryTrainingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teachmygospel.app;
+				PRODUCT_NAME = TeachMyGospel;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F2F1E99F39DE9C9462F7623 /* Pods-MissionaryTrainingApp.release.xcconfig */;
+			baseConfigurationReference = 9F2F1E99F39DE9C9462F7623 /* Pods-TeachMyGospel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1622,15 +1622,15 @@
 					"$(SRCROOT)/../node_modules/appcenter-analytics/ios/AppCenterReactNativeAnalytics",
 					"$(SRCROOT)/../node_modules/appcenter-crashes/ios/AppCenterReactNativeCrashes",
 				);
-				INFOPLIST_FILE = MissionaryTrainingApp/Info.plist;
+				INFOPLIST_FILE = TeachMyGospel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.missionarytrainingapp;
-				PRODUCT_NAME = MissionaryTrainingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.teachmygospel.app;
+				PRODUCT_NAME = TeachMyGospel;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1714,7 +1714,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MissionaryTrainingAppTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "TeachMyGospelTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1723,7 +1723,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MissionaryTrainingApp" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "TeachMyGospel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1732,7 +1732,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MissionaryTrainingApp" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "TeachMyGospel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

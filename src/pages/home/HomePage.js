@@ -39,12 +39,12 @@ class HomePage extends Component<{ navigation: any, updateAuthState: any, lesson
   };
 
   render() {
-    console.log('home props', this.props);
     const { lessons } = this.props;
     return (
       <Container>
         <Content contentContainerStyle={styles.container}>
-          {lessons.map(lesson => <LessonNavigationGroup key={lesson.name} lesson={lesson} />)}
+          {lessons &&
+            lessons.map(lesson => <LessonNavigationGroup key={lesson.name} lesson={lesson} />)}
         </Content>
       </Container>
     );

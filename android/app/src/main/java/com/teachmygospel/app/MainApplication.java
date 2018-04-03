@@ -1,4 +1,4 @@
-package com.missionarytrainingapp;
+package com.teachmygospel.app;
 
 import android.app.Application;
 import android.support.multidex.MultiDexApplication;

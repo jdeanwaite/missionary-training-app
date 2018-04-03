@@ -42,7 +42,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>The camera will be used for practice teaching videos.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>The microphone will be used for practice teaching videos.</string>
 	<key>UIAppFonts</key>
